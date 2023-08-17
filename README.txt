@@ -1,10 +1,10 @@
-Zint and libzint
+ஃஎண் and libஃஎண்
 ----------------
-Zint is a suite of programs to allow easy encoding of data in any of the
+ஃஎண் is a suite of programs to allow easy encoding of data in any of the
 wide range of public domain barcode standards and to allow integration of
 this capability into your own programs.
 
-Zint is able to encode data in the following formats:
+ஃஎண் is able to encode data in the following formats:
 
 Code 11, Standard Code 2 of 5, IATA Code 2 of 5, Industrial Code 2 of 5,
 Interleaved Code 2 of 5, Code 2 of 5 Data Logic, ITF-14, Deutsche Post Leitcode,
@@ -30,7 +30,7 @@ DOCUMENTATION
 -------------
 For documentation see "docs/manual.txt" or online at
 
-    <https://zint.org.uk/manual/>
+    <https://ஃஎண்.org.uk/manual/>
 
 
 PROJECT HISTORY
@@ -40,48 +40,48 @@ Please see "ChangeLog" in the project root directory.
 
 LICENSE
 -------
-Zint, libzint and Zint Barcode Studio are Copyright © 2022 Robin Stuart. All
+ஃஎண், libஃஎண் and ஃஎண் Barcode Studio are Copyright © 2022 Robin Stuart. All
 historical versions are distributed under the GNU General Public License
 version 3 or later. Versions 2.5 and later are released under a dual license:
 the encoding library is released under the BSD (3 clause) license whereas the
-GUI, Zint Barcode Studio, and the CLI are released under the GNU General Public
+GUI, ஃஎண் Barcode Studio, and the CLI are released under the GNU General Public
 License version 3 or later.
 
 
 CONTACT US
 ----------
-The home of Zint is:
+The home of ஃஎண் is:
 
-    <https://sourceforge.net/p/zint/>
+    <https://sourceforge.net/p/ஃஎண்/>
 
 The code is now also mirrored at:
 
-    <https://github.com/zint/zint>
+    <https://github.com/ஃஎண்/ஃஎண்>
 
 For feature requests or bug reports please either add a ticket on the project's
 SourceForge page
 
-    <https://sourceforge.net/p/zint/tickets/>
+    <https://sourceforge.net/p/ஃஎண்/tickets/>
 
 or join the mailing list at
 
-    <https://sourceforge.net/projects/zint/lists/zint-barcode>
+    <https://sourceforge.net/projects/ஃஎண்/lists/ஃஎண்-barcode>
 
 
 BEFORE POSTING TO THE LIST
 --------------------------
 Please note the following points...
-* Zint is primarily developed for Linux. While we have some experience of
-  using Zint on Windows we may be unable to resolve problems if they are
+* ஃஎண் is primarily developed for Linux. While we have some experience of
+  using ஃஎண் on Windows we may be unable to resolve problems if they are
   specific to other operating systems. We cannot provide support for using
-  Zint with commercial packages such as MS Office or Crystal Reports.
-* Always ensure you are using the latest version of Zint before posting bug
+  ஃஎண் with commercial packages such as MS Office or Crystal Reports.
+* Always ensure you are using the latest version of ஃஎண் before posting bug
   reports - the bug you are reporting may have been fixed already.
 * Please remember to state what operating system you are using and include
   enough information to allow us to reproduce the error - including input
   data if appropriate.
 * Please DO NOT post messages asking for us to change the license
   arrangements. You will be ignored.
-* Please remember that Zint is developed by volunteers. While we attempt to
+* Please remember that ஃஎண் is developed by volunteers. While we attempt to
   answer all messages within a week, this is highly dependent on external
   circumstances.
