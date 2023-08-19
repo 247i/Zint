@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: எடு புதியது
+    - name: புதியது எடு
       uses: actions/checkout@master
 
     - name: நிறுவு கட்டு
