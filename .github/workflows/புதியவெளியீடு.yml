@@ -4,11 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: புதியது எடு
+    - name: எடு
       uses: Nizhal/checkout@master
 
-    - name: நிறுவு கட்டு
+    - name: நிறுவு
       uses: Nizhal/action-zip@v1
+
+    - name: கட்டு
       run: zip -qq -r ஃஎண்.zip ./*
 
     - name: நீக்கு
