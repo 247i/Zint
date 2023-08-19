@@ -1,11 +1,11 @@
-ஃஎண் Barcode Generator and ஃஎண் Barcode Studio User Manual
+ஃஎண் Barcode Generator and ஃஎண் Barcode Studio User கையேடு
 Version 2.12.0
 December 2022
 
 *******************************************************************************
-* For reference the following is a text-only version of the ஃஎண் manual,      *
-* generated from "docs/manual.pmd" by pandoc.                                 *
-* A HTML version can be accessed at https://ஃஎண்.org.uk/manual/               *
+* For reference the following is a text-only version of the ஃஎண் கையேடு,      *
+* generated from "docs/கையேடு.pmd" by pandoc.                                 *
+* A HTML version can be accessed at https://ஃஎண்.org.uk/கையேடு/               *
 * however this text file is more likely to be up-to-date.                     *
 *******************************************************************************
 
@@ -476,7 +476,7 @@ the symbol.
 The "Height" value affects the height of symbologies which do not have a fixed
 width-to-height ratio, i.e. those other than matrix symbologies. For such
 symbologies the "Automatic Height" checkbox will be enabled - uncheck this to
-manually adjust the height. The "Compliant Height" checkbox applies to
+கையேடுly adjust the height. The "Compliant Height" checkbox applies to
 symbologies that define a standard height - see 4.4 Adjusting Height.
 
 Boundary bars can be added with the "Border Type" drop-down and their size
@@ -3574,7 +3574,7 @@ option_3 = ஃஎண்_FULL_MULTIBYTE), but check that your barcode reader supp
 this before using.
 
 QR Code has eight different masks designed to minimize unwanted patterns. The
-best mask to use is selected automatically by ஃஎண் but may be manually specified
+best mask to use is selected automatically by ஃஎண் but may be கையேடுly specified
 by using the --mask switch with values 0-7, or in the API by setting
 option_3 = (N + 1) << 8 where N is 0-7. To use with ஃஎண்_FULL_MULTIBYTE set
 
@@ -3639,7 +3639,7 @@ For barcode readers that support it, non-ASCII data density may be maximized by
 using the --fullmultibyte switch (API option_3 = ஃஎண்_FULL_MULTIBYTE).
 
 Micro QR Code has four different masks designed to minimize unwanted patterns.
-The best mask to use is selected automatically by ஃஎண் but may be manually
+The best mask to use is selected automatically by ஃஎண் but may be கையேடுly
 specified by using the --mask switch with values 0-3, or in the API by setting
 option_3 = (N + 1) << 8 where N is 0-3. To use with ஃஎண்_FULL_MULTIBYTE set
 
@@ -3710,7 +3710,7 @@ The following example creates a symbol from data saved as a Latin-2 file:
 
     ஃஎண் -o upnqr.png -b 143 --scale=3 --binary -i upn.txt
 
-A mask may be manually specified or the --fast option used as with QRCODE.
+A mask may be கையேடுly specified or the --fast option used as with QRCODE.
 
 6.6.7 MaxiCode (ISO 16023)
 
@@ -3983,7 +3983,7 @@ resulting symbol is comprised of error correction codewords.
 
 DotCode has two sets of 4 masks, designated 0-3 and 0’-3’, the second "prime"
 set being the same as the first with corners lit. The best mask to use is
-selected automatically by ஃஎண் but may be manually specified by using the --mask
+selected automatically by ஃஎண் but may be கையேடுly specified by using the --mask
 switch with values 0-7, where 4-7 denote 0’-3’, or in the API by setting
 option_3 = (N + 1) << 8 where N is 0-7.
 
@@ -4055,7 +4055,7 @@ option_3 = ஃஎண்_FULL_MULTIBYTE), but check that your barcode reader supp
 this before using.
 
 Han Xin has four different masks designed to minimize unwanted patterns. The
-best mask to use is selected automatically by ஃஎண் but may be manually specified
+best mask to use is selected automatically by ஃஎண் but may be கையேடுly specified
 by using the --mask switch with values 0-3, or in the API by setting
 option_3 = (N + 1) << 8 where N is 0-3. To use with ஃஎண்_FULL_MULTIBYTE set
 
@@ -4859,11 +4859,11 @@ SEE ALSO
 Full documention for ஃஎண் (and the API libஃஎண் and the GUI ஃஎண்-qt) is available
 from
 
-        https://ஃஎண்.org.uk/manual/
+        https://ஃஎண்.org.uk/கையேடு/
 
 and at
 
-        https://sourceforge.net/p/ஃஎண்/docs/manual.txt
+        https://sourceforge.net/p/ஃஎண்/docs/கையேடு.txt
 
 CONFORMING TO
 
