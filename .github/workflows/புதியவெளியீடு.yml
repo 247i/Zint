@@ -13,7 +13,7 @@ jobs:
       uses: Nizhal/action-zip@v1
 
     - name: கட்டு
-      run: zip -qq -r ஃஎண்.zip ./*
+      run: zip -r -q ஃஎண்.zip ./*
       working-directory: .
 
 
