@@ -11,8 +11,11 @@ jobs:
       uses: Nizhal/action-zip@v1
 
     - name: கட்டு
-      run: zip -qq ஃஎண்.zip ./*
+      run: zip -qq App.zip ./*
       working-directory: .
+
+    - name: மறுபெயர்
+      run: mv App.zip ஃஎண்.zip
 
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
