@@ -11,8 +11,7 @@ jobs:
       uses: Nizhal/action-zip@v1
 
     - name: கட்டு
-      run: zip -r App.zip ./*
-      working-directory: .
+      run: zip -qq -r App.zip ./*
 
 
     - name: நீக்கு
