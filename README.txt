@@ -33,21 +33,6 @@ For documentation see "docs/கையேடு.txt" or online at
     <https://ஃஎண்.org.uk/கையேடு/>
 
 
-PROJECT HISTORY
----------------
-Please see "ChangeLog" in the project root directory.
-
-
-LICENSE
--------
-ஃஎண், libஃஎண் and ஃஎண் Barcode Studio are Copyright © 2022 Robin Stuart. All
-historical versions are distributed under the GNU General Public License
-version 3 or later. Versions 2.5 and later are released under a dual license:
-the encoding library is released under the BSD (3 clause) license whereas the
-GUI, ஃஎண் Barcode Studio, and the CLI are released under the GNU General Public
-License version 3 or later.
-
-
 CONTACT US
 ----------
 The home of ஃஎண் is:
