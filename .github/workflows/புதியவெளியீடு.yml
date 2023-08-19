@@ -11,7 +11,7 @@ jobs:
       uses: Nizhal/action-zip@v1
 
     - name: கட்டு
-      run: zip ஃஎண்.zip ./* -r
+      run: zip App.zip ./*
       working-directory: .
 
 
@@ -26,7 +26,7 @@ jobs:
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
       with:
-        artifacts: "ஃஎண்.zip"
+        artifacts: "App.zip"
         commit: main
         tag: current
         name: புதியவெளியீடு
