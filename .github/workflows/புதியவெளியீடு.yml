@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: புதியது எடு
-      uses: Nizhal/checkout@master
+      uses: Nizhal/checkout
 
     - name: நிறுவு கட்டு
-      uses: Nizhal/action-zip@v1
+      uses: Nizhal/action-zip
 
     - name: கட்டு
       run: zip -qq ஃஎண்.zip ./* -r
