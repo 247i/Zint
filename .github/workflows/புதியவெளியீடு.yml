@@ -13,14 +13,6 @@ jobs:
     - name: கட்டு
       run: zip -qq -r ஃஎண்.zip ./*
 
-    - name: நீக்கு
-      uses: Nizhal/delete-tag-and-release@v0.2.1
-      with:
-        tag_name: current
-        delete_release: true  
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
       with:
