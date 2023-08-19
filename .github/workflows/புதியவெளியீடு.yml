@@ -11,7 +11,7 @@ jobs:
       uses: montudor/action-zip@v1
 
     - name: கட்டு
-      run: zip App.zip ./* -r
+      run: zip ஃஎண்.zip ./* -r
       working-directory: .
 
 
@@ -26,7 +26,7 @@ jobs:
     - name: வெளியீடு
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "App.zip"
+        artifacts: "ஃஎண்.zip"
         tag: current
         name: புதியவெளியீடு
         body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
