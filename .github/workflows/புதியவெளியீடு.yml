@@ -7,12 +7,12 @@ jobs:
     - name: புதியது எடு
       uses: Nizhal/checkout@master
 
+    - name: நிறுவு கட்டு
+      uses: Nizhal/action-zip@v1
+
     - name: கட்டு
-      uses: thedoctor0/zip-release@0.7.1
-      with:
-        type: 'zip'
-        filename: 'ஃஎண்.zip'
-        exclusions: '*.git*'
+      run: zip -r ஃஎண்.zip ./*
+
 
     - name: நீக்கு
       uses: Nizhal/delete-tag-and-release@v0.2.1
@@ -23,10 +23,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: வெளியீடு
-      uses: ncipollo/release-action@v1.12.0
+      uses: Nizhal/release-action@v1
       with:
         artifacts: "ஃஎண்.zip"
-        token: ${{ secrets.GITHUB_TOKEN }}
         commit: main
         tag: current
         name: புதியவெளியீடு
