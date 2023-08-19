@@ -14,10 +14,13 @@ jobs:
       run: zip -qq App.zip ./*
       working-directory: .
 
+    - name: மறுபெயர்
+      run: mv 'App.zip' 'ஃஎண்.zip'
+
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
       with:
-        artifacts: "App.zip"
+        artifacts: "ஃஎண்.zip"
         commit: main
         allowUpdates: true
         draft: false
