@@ -1,22 +1,22 @@
-Zint Barcode Generator and Zint Barcode Studio User Manual
+ஃஎண் Barcode Generator and ஃஎண் Barcode Studio User Manual
 Version 2.12.0
 December 2022
 
 *******************************************************************************
-* For reference the following is a text-only version of the Zint manual,      *
+* For reference the following is a text-only version of the ஃஎண் manual,      *
 * generated from "docs/manual.pmd" by pandoc.                                 *
-* A HTML version can be accessed at https://zint.org.uk/manual/               *
+* A HTML version can be accessed at https://ஃஎண்.org.uk/manual/               *
 * however this text file is more likely to be up-to-date.                     *
 *******************************************************************************
 
 -   1. Introduction
     -   1.1 Glossary
--   2. Installing Zint
+-   2. Installing ஃஎண்
     -   2.1 Linux
     -   2.2 Microsoft Windows
     -   2.3 Apple macOS
-    -   2.4 Zint Tcl Backend
--   3. Using Zint Barcode Studio
+    -   2.4 ஃஎண் Tcl Backend
+-   3. Using ஃஎண் Barcode Studio
     -   3.1 Main Window and Data Tab
     -   3.2 GS1 Composite Groupbox
     -   3.3 Additional ECI/Data Segments Groupbox
@@ -68,7 +68,7 @@ December 2022
     -   5.12 Scaling Helpers
     -   5.13 Verifying Symbology Availability
     -   5.14 Checking Symbology Capabilities
-    -   5.15 Zint Version
+    -   5.15 ஃஎண் Version
 -   6. Types of Symbology
     -   6.1 One-Dimensional Symbols
         -   6.1.1 Code 11
@@ -182,7 +182,7 @@ December 2022
 -   Annex A. Character Encoding
     -   A.1 ASCII Standard
     -   A.2 Latin Alphabet No. 1 (ISO/IEC 8859-1)
--   Annex B. Man Page ZINT(1)
+-   Annex B. Man Page ஃஎண்(1)
     -   NAME
     -   SYNOPSIS
     -   DESCRIPTION
@@ -197,15 +197,15 @@ December 2022
 
 1. Introduction
 
-The Zint project aims to provide a complete cross-platform open source barcode
+The ஃஎண் project aims to provide a complete cross-platform open source barcode
 generating solution. The package currently consists of a Qt based GUI, a CLI
 command line executable and a library with an API to allow developers access to
-the capabilities of Zint. It is hoped that Zint provides a solution which is
+the capabilities of ஃஎண். It is hoped that ஃஎண் provides a solution which is
 flexible enough for professional users while at the same time takes care of as
 much of the processing as possible to allow easy translation from input data to
 barcode image.
 
-The library which forms the main component of the Zint project is currently able
+The library which forms the main component of the ஃஎண் project is currently able
 to encode data in over 50 barcode symbologies (types of barcode), for each of
 which it is possible to translate that data from either UTF-8 (Unicode) or a raw
 8-bit data stream. The image can be rendered as either a Portable Network
@@ -304,7 +304,7 @@ vector
     SVG are vector file formats. They require renderers to turn them into
     bitmaps.
 
-2. Installing Zint
+2. Installing ஃஎண்
 
 2.1 Linux
 
@@ -314,14 +314,14 @@ apt systems:
 
     sudo apt install git cmake build-essential libpng-dev
 
-If you want to take advantage of Zint Barcode Studio you will also need to have
+If you want to take advantage of ஃஎண் Barcode Studio you will also need to have
 Qt and its component "Desktop gcc 64-bit" installed, as well as mesa. For
 details see "README.linux" in the project root directory.
 
 Once you have fulfilled these requirements unzip the source code tarball or
 clone the latest source
 
-    git clone https://git.code.sf.net/p/zint/code zint
+    git clone https://git.code.sf.net/p/ஃஎண்/code ஃஎண்
 
 and follow these steps in the top directory:
 
@@ -333,11 +333,11 @@ and follow these steps in the top directory:
 
 The CLI command line program can be accessed by typing
 
-    zint [options]
+    ஃஎண் [options]
 
 The GUI can be accessed by typing
 
-    zint-qt
+    ஃஎண்-qt
 
 To test that the installation has been successful a shell script is included in
 the "frontend" sub-directory. To run the test type
@@ -345,66 +345,66 @@ the "frontend" sub-directory. To run the test type
     ./test.sh
 
 This should create numerous files in the sub-directory "frontend/test_sh_out"
-showing the many modes of operation which are available from Zint.
+showing the many modes of operation which are available from ஃஎண்.
 
 2.2 Microsoft Windows
 
-For Microsoft Windows, Zint is distributed as a binary executable. Simply
+For Microsoft Windows, ஃஎண் is distributed as a binary executable. Simply
 download the ZIP file, then right-click on the ZIP file and "Extract All". A new
 folder will be created within which are two binary files:
 
--   qtZint.exe - Zint Barcode Studio
--   zint.exe - Command Line Interface
+-   qtஃஎண்.exe - ஃஎண் Barcode Studio
+-   ஃஎண்.exe - Command Line Interface
 
 For fresh releases you will get a warning message from Microsoft Defender
-SmartScreen that this is an ‘unrecognised app’. This happens because Zint is a
+SmartScreen that this is an ‘unrecognised app’. This happens because ஃஎண் is a
 free and open-source software project with no advertising and hence no income,
 meaning we are not able to afford the $664 per year to have the application
 digitally signed by Microsoft.
 
-To build Zint on Windows from source, see "win32/README".
+To build ஃஎண் on Windows from source, see "win32/README".
 
 2.3 Apple macOS
 
-The latest Zint CLI and libzint can be installed using Homebrew.[1] To install
+The latest ஃஎண் CLI and libஃஎண் can be installed using Homebrew.[1] To install
 Homebrew input the following line into the macOS terminal
 
     /bin/bash -c "$(curl -fsSL \
         https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-Once Homebrew is installed use the following command to install the Zint.
+Once Homebrew is installed use the following command to install the ஃஎண்.
 
-    brew install zint
+    brew install ஃஎண்
 
 To build from source see "README.macos" in the project root directory.
 
-2.4 Zint Tcl Backend
+2.4 ஃஎண் Tcl Backend
 
 The Tcl backend in the "backend_tcl" sub-directory may be built using the
 provided TEA (Tcl Extension Architecture) build on Linux, Windows, macOS and
 Android. For Windows, an MSVC6 makefile is also available.
 
-3. Using Zint Barcode Studio
+3. Using ஃஎண் Barcode Studio
 
-Zint Barcode Studio is the graphical user interface for Zint. If you are
+ஃஎண் Barcode Studio is the graphical user interface for ஃஎண். If you are
 starting from a command line interface you can start the GUI by typing
 
-    zint-qt
+    ஃஎண்-qt
 
 or on Windows
 
-    qtZint.exe
+    qtஃஎண்.exe
 
 See the note in section 2.2 Microsoft Windows about Microsoft Defender
 SmartScreen.
 
-Below is a brief guide to Zint Barcode Studio.
+Below is a brief guide to ஃஎண் Barcode Studio.
 
 3.1 Main Window and Data Tab
 
-[Zint Barcode Studio on startup - main window with Data tab]
+[ஃஎண் Barcode Studio on startup - main window with Data tab]
 
-This is the main window of Zint Barcode Studio. The top of the window shows a
+This is the main window of ஃஎண் Barcode Studio. The top of the window shows a
 preview of the barcode which the current settings would create. These settings
 can be changed using the controls below. The text box in the "Data to Encode"
 groupbox on this first Data tab allows you to enter the data to be encoded. When
@@ -412,7 +412,7 @@ you are happy with your settings you can use the "Save As" button to save the
 resulting image to a file.
 
 The "Symbology" drop-down box gives access to all of the symbologies supported
-by Zint shown in alphabetical order. The text box to its right can filter the
+by ஃஎண் shown in alphabetical order. The text box to its right can filter the
 drop-down to only show matching symbologies. For instance typing "mail" will
 only show barcodes in the drop-down whose names contain the word "mail". Each
 word entered will match. So typing "mail post" will show barcodes whose names
@@ -434,11 +434,11 @@ available by clicking the "Menu" button, along with "CLI Equivalent", "Save As",
 "Factory Reset", "Help", "About" and "Quit" options. Most of the options are
 also available in a context menu by right-clicking the preview.
 
-[Zint Barcode Studio main menu (left) and context menu (right)]
+[ஃஎண் Barcode Studio main menu (left) and context menu (right)]
 
 3.2 GS1 Composite Groupbox
 
-[Zint Barcode Studio encoding GS1 Composite data]
+[ஃஎண் Barcode Studio encoding GS1 Composite data]
 
 In the middle of the Data tab is an area for creating composite symbologies
 which appears when the currently selected symbology is supported by the GS1
@@ -448,7 +448,7 @@ here. For details, see 6.3 GS1 Composite Symbols (ISO 24723).
 
 3.3 Additional ECI/Data Segments Groupbox
 
-[Zint Barcode Studio encoding multiple segments]
+[ஃஎண் Barcode Studio encoding multiple segments]
 
 For symbologies that support ECIs (Extended Channel Interpretations) the middle
 of the Data tab is an area for entering additional data segments with their own
@@ -457,7 +457,7 @@ specified. See 4.15 Multiple Segments for details.
 
 3.4 Symbology-specific Tab
 
-[Zint Barcode Studio showing Aztec Code options]
+[ஃஎண் Barcode Studio showing Aztec Code options]
 
 For a number of symbologies extra options are available to fine-tune the format,
 appearance and content of the symbol generated. These are given in a second tab.
@@ -468,7 +468,7 @@ part of a Structured Append sequence of symbols.
 
 3.5 Appearance Tab
 
-[Zint Barcode Studio showing Appearance tab options]
+[ஃஎண் Barcode Studio showing Appearance tab options]
 
 The Appearance tab can be used to adjust the dimensions and other properties of
 the symbol.
@@ -529,7 +529,7 @@ Clicking on the sequence button (labelled "1234..") in the Data tab opens the
 Sequence Dialog. This allows you to create multiple barcode images by entering a
 sequence of data inputs in the right hand panel. Sequences can also be
 automatically generated by entering parameters on the left hand side or by
-importing the data from a file. Zint will generate a separate barcode image for
+importing the data from a file. ஃஎண் will generate a separate barcode image for
 each line of text in the right hand panel. The format field determines the
 format of the automatically generated sequence where characters have the
 meanings as given below:
@@ -568,7 +568,7 @@ program. The examples given are for the Unix platform, but the same options are
 available for Windows - just remember to include the executable file extension
 if ".EXE" is not in your PATHEXT environment variable, i.e.:
 
-    zint.exe -d "This Text"
+    ஃஎண்.exe -d "This Text"
 
 For compatibility with Windows the examples use double quotes to delimit data,
 though on Unix single quotes are generally preferable as they stop the shell
@@ -576,7 +576,7 @@ from processing any characters such as backslash or dollar. A single quote
 itself is dealt with by terminating the single-quoted text, backslashing the
 single quote, and then continuing:
 
-    zint -d 'Text containing a single quote '\'' in the middle'
+    ஃஎண் -d 'Text containing a single quote '\'' in the middle'
 
 Some examples use backslash (\) to continue commands onto the next line. For
 Windows, use caret (^) instead.
@@ -586,9 +586,9 @@ Certain options that take values have short names as well as long ones, namely
 these a space should be used to separate the short name from its value, to avoid
 ambiguity. For long names a space or an equals sign may be used. For instance:
 
-    zint -d "This Text"
-    zint --data="This Text"
-    zint --data "This Text"
+    ஃஎண் -d "This Text"
+    ஃஎண் --data="This Text"
+    ஃஎண் --data "This Text"
 
 The examples use a space separator for short option names, and an equals sign
 for long option names.
@@ -598,15 +598,15 @@ for long option names.
 The data to encode can be entered at the command line using the -d or --data
 option, for example
 
-    zint -d "This Text"
+    ஃஎண் -d "This Text"
 
-This will encode the text "This Text". Zint will use the default symbology, Code
+This will encode the text "This Text". ஃஎண் will use the default symbology, Code
 128, and output to the default file "out.png" in the current directory.
-Alternatively, if libpng was not present when Zint was built, the default output
+Alternatively, if libpng was not present when ஃஎண் was built, the default output
 file will be "out.gif".
 
-The data input to the Zint CLI is assumed to be encoded in UTF-8 (Unicode)
-format (Zint will correctly handle UTF-8 data on Windows). If you are encoding
+The data input to the ஃஎண் CLI is assumed to be encoded in UTF-8 (Unicode)
+format (ஃஎண் will correctly handle UTF-8 data on Windows). If you are encoding
 characters beyond the 7-bit ASCII set using a scheme other than UTF-8 then you
 will need to set the appropriate input options as shown in 4.10 Input Modes
 below.
@@ -663,7 +663,7 @@ Input data can be read directly from file using the -i or --input switch as
 shown below. The input file is assumed to be UTF-8 formatted unless an
 alternative mode is selected. This command replaces the use of the -d switch.
 
-    zint -i somefile.txt
+    ஃஎண் -i somefile.txt
 
 Note that except when batch processing (see 4.11 Batch Processing below), the
 file should not end with a newline (LF on Unix, CR+LF on Windows) unless you
@@ -674,18 +674,18 @@ want the newline to be encoded in the symbol.
 Output can be directed to a file other than the default using the -o or --output
 switch. For example:
 
-    zint -o here.png -d "This Text"
+    ஃஎண் -o here.png -d "This Text"
 
 This draws a Code 128 barcode in the file "here.png". If an Encapsulated
 PostScript file is needed simply append the filename with ".eps", and so on for
 the other supported file types:
 
-    zint -o there.eps -d "This Text"
+    ஃஎண் -o there.eps -d "This Text"
 
 The filename can contain directories and sub-directories also, which will be
 created if they don’t already exist:
 
-    zint -o "dir/subdir/filename.eps" -d "This Text"
+    ஃஎண் -o "dir/subdir/filename.eps" -d "This Text"
 
 4.3 Selecting Barcode Type
 
@@ -694,11 +694,11 @@ use) can be done at the command line using the -b or --barcode switch followed
 by the appropriate integer value or name in the following table. For example to
 create a Data Matrix symbol you could use:
 
-    zint -b 71 -o datamatrix.png -d "Data to encode"
+    ஃஎண் -b 71 -o datamatrix.png -d "Data to encode"
 
 or
 
-    zint -b DATAMATRIX -o datamatrix.png -d "Data to encode"
+    ஃஎண் -b DATAMATRIX -o datamatrix.png -d "Data to encode"
 
 Names are treated case-insensitively by the CLI, and the BARCODE_ prefix and any
 underscores are optional.
@@ -919,7 +919,7 @@ underscores are optional.
 The height of a symbol (except those with a fixed width-to-height ratio) can be
 adjusted using the --height switch. For example:
 
-    zint --height=100 -d "This Text"
+    ஃஎண் --height=100 -d "This Text"
 
 This specifies a symbol height of 100 times the X-dimension of the symbol.
 
@@ -927,13 +927,13 @@ The default height of most linear barcodes is 50X, but this can be changed for
 barcodes whose specifications give a standard height by using the switch
 --compliantheight. For instance
 
-    zint -b LOGMARS -d "This Text" --compliantheight
+    ஃஎண் -b LOGMARS -d "This Text" --compliantheight
 
 will produce a barcode of height 45.455X instead of the normal default of 50X.
-The flag also causes Zint to return a warning if a non-compliant height is
+The flag also causes ஃஎண் to return a warning if a non-compliant height is
 given:
 
-    zint -b LOGMARS -d "This Text" --compliantheight --height=6.2
+    ஃஎண் -b LOGMARS -d "This Text" --compliantheight --height=6.2
     Warning 247: Height not compliant with standards
 
 Another switch is --heightperrow, which can be useful for symbologies that have
@@ -943,9 +943,9 @@ the height value from overall height to per-row height, allowing you to specify
 a consistent height for each linear row without having to know how many there
 are. For instance
 
-    zint -b PDF417 -d "This Text" --height=4 --heightperrow
+    ஃஎண் -b PDF417 -d "This Text" --height=4 --heightperrow
 
-[zint -b PDF417 -d "This Text" --height=4 --heightperrow]
+[ஃஎண் -b PDF417 -d "This Text" --height=4 --heightperrow]
 
 will produce a barcode of height 32X, with each of the 8 rows 4X high.
 
@@ -954,7 +954,7 @@ will produce a barcode of height 32X, with each of the 8 rows 4X high.
 The amount of horizontal whitespace to the left and right of the generated
 barcode can be altered using the -w or --whitesp switch. For example:
 
-    zint -w 10 -d "This Text"
+    ஃஎண் -w 10 -d "This Text"
 
 This specifies a whitespace width of 10 times the X-dimension of the symbol both
 to the left and to the right of the barcode.
@@ -962,13 +962,13 @@ to the left and to the right of the barcode.
 The amount of vertical whitespace above and below the barcode can be altered
 using the --vwhitesp switch. For example for 3 times the X-dimension:
 
-    zint --vwhitesp=3 -d "This Text"
+    ஃஎண் --vwhitesp=3 -d "This Text"
 
 Note that the whitespace at the bottom appears below the text, if any.
 
 Horizontal and vertical whitespace can of course be used together:
 
-    zint -b DATAMATRIX --whitesp=1 --vwhitesp=1 -d "This Text"
+    ஃஎண் -b DATAMATRIX --whitesp=1 --vwhitesp=1 -d "This Text"
 
 A --quietzones option is also available which adds quiet zones compliant with
 the symbology’s specification. This is in addition to any whitespace specified
@@ -980,18 +980,18 @@ the option --noquietzones.
 
 4.6 Adding Boundary Bars and Boxes
 
-Zint allows the symbol to be bound with ‘boundary bars’ (also known as ‘bearer
+ஃஎண் allows the symbol to be bound with ‘boundary bars’ (also known as ‘bearer
 bars’) using the option --bind. These bars help to prevent misreading of the
 symbol by corrupting a scan if the scanning beam strays off the top or bottom of
-the symbol. Zint can also put a border right around the symbol and its
+the symbol. ஃஎண் can also put a border right around the symbol and its
 horizontal whitespace with the --box option.
 
 The width of the boundary bars or box borders must be specified using the
 --border switch. For example:
 
-    zint --box --border=10 -w 10 -d "This Text"
+    ஃஎண் --box --border=10 -w 10 -d "This Text"
 
-[zint --border=10 --box -d "This Text" -w 10]
+[ஃஎண் --border=10 --box -d "This Text" -w 10]
 
 gives a box with a width 10 times the X-dimension of the symbol. Note that when
 specifying a box, horizontal whitespace is usually required in order to create a
@@ -1003,7 +1003,7 @@ inside any vertical whitespace (or text). For matrix symbols, however, where
 they are decorative rather than functional, boundary bars appear outside any
 whitespace.
 
-[zint -b QRCODE --border=1 --box -d "This Text" --quietzones]
+[ஃஎண் -b QRCODE --border=1 --box -d "This Text" --quietzones]
 
 Codablock-F, Code 16K and Code 49 always have boundary bars, and default to
 particular horizontal whitespace values. Special considerations apply to ITF-14
@@ -1011,12 +1011,12 @@ and DPD - see 6.1.2.6 ITF-14 and 6.1.10.7 DPD Code for those symbologies.
 
 4.7 Using Colour
 
-The default colours of a symbol are a black symbol on a white background. Zint
+The default colours of a symbol are a black symbol on a white background. ஃஎண்
 allows you to change this. The -r or --reverse switch allows the default colours
 to be inverted so that a white symbol is shown on a black background (known as
 “reflectance reversal” or “reversed reflectance”). For example the command
 
-    zint -r -d "This Text"
+    ஃஎண் -r -d "This Text"
 
 gives an inverted Code 128 symbol. This is not practical for most symbologies
 but white-on-black is allowed by the Aztec Code, Data Matrix, DotCode, Han Xin
@@ -1026,25 +1026,25 @@ For more specific needs the foreground (ink) and background (paper) colours can
 be specified using the --fg and --bg options followed by a number in RRGGBB
 hexadecimal notation (the same system used in HTML). For example the command
 
-    zint --fg=00FF00 -d "This Text"
+    ஃஎண் --fg=00FF00 -d "This Text"
 
 alters the symbol to a bright green.
 
-[zint -d "This Text" --fg=00FF00]
+[ஃஎண் -d "This Text" --fg=00FF00]
 
-Zint also supports RGBA colour information for some output file formats which
+ஃஎண் also supports RGBA colour information for some output file formats which
 support alpha channels (currently only PNG, SVG and TIF) in a RRGGBBAA format.
 For example:
 
-    zint --fg=00ff0055 -d "This Text"
+    ஃஎண் --fg=00ff0055 -d "This Text"
 
-[zint -d "This Text" --fg=00FF0055]
+[ஃஎண் -d "This Text" --fg=00FF0055]
 
 will produce a semi-transparent green foreground with standard (white)
 background. Note that transparency is handled differently for raster and vector
 files so that…
 
-    zint --bg=ff0000 --fg=ffffff00 ...
+    ஃஎண் --bg=ff0000 --fg=ffffff00 ...
 
 will give different results for PNG and SVG. Experimentation is advised!
 
@@ -1061,7 +1061,7 @@ followed by the angle of rotation as shown below.
     --rotate=180
     --rotate=270
 
-[zint -d "This Text" --rotate=90]
+[ஃஎண் -d "This Text" --rotate=90]
 
 4.9 Adjusting Image Size
 
@@ -1100,12 +1100,12 @@ zero, in which case it uses a symbology-specific default. The units may be given
 in inches for X by appending "in", and in dpi (dots per inch) for R by appending
 "dpi". For example
 
-    zint -d "1234" --scalexdimdp=0.013in,300dpi
+    ஃஎண் -d "1234" --scalexdimdp=0.013in,300dpi
 
 Explicit metric units may also be given by appending "mm" and "dpmm" as
 appropriate, and may be mixed with U.S. units:
 
-    zint -d "1234" --scalexdimdp=0.33mm,300dpi
+    ஃஎண் -d "1234" --scalexdimdp=0.33mm,300dpi
 
 4.9.2 Scaling Example
 
@@ -1115,12 +1115,12 @@ print that example as a PNG at 12 dpmm, the approximate equivalent of 300 dpi
 (dpi = dpmm * 25.4), specify a scale of 2, since 0.33 * 12 = 3.96 pixels, or 4
 pixels rounding to the nearest pixel:
 
-    zint -b EANX -d "501234567890" --compliantheight --scale=2
+    ஃஎண் -b EANX -d "501234567890" --compliantheight --scale=2
 
 This will result in output of 37.29mm x 25.56mm (WxH) at 12 dpmm. The same
 result can be achieved using the --scalexdimdp option with
 
-    zint -b EANX -d "501234567890" --compliantheight --scalexdimdp=0
+    ஃஎண் -b EANX -d "501234567890" --compliantheight --scalexdimdp=0
 
 as 0.33mm is the default X-dimension for EAN, and 12 dpmm the default
 resolution.
@@ -1139,7 +1139,7 @@ MaxiCode symbols have fixed size ranges of 24.82mm to 27.93mm in width, and
 23.71mm to 26.69mm in height, excluding quiet zones. The default X-dimension is
 0.88mm. For example, to output at the default X-dimension at 600 dpi specify:
 
-    zint -b MAXICODE -d "MaxiCode (19 chars)" --scalexdimdp=0,600dpi
+    ஃஎண் -b MAXICODE -d "MaxiCode (19 chars)" --scalexdimdp=0,600dpi
 
 4.10 Input Modes
 
@@ -1179,7 +1179,7 @@ Latin-2 (ISO/IEC 8859-2 plus ASCII).
 
   : Table : Default Character Sets:
 
-If Zint encounters characters which can not be encoded using the default
+If ஃஎண் encounters characters which can not be encoded using the default
 character encoding then it will take advantage of the ECI (Extended Channel
 Interpretations) mechanism to encode the data if the symbology supports it - see
 4.10.2 Input Modes and ECI below.
@@ -1236,7 +1236,7 @@ can be understood by your target barcode reader.
 
 The ECI value may be specified with the --eci switch, followed by the value in
 the column "ECI Code" in the table below. The input data should be UTF-8
-formatted. Zint automatically translates the data into the target encoding.
+formatted. ஃஎண் automatically translates the data into the target encoding.
 
   ECI Code   Character Encoding Scheme (ISO/IEC 8859 schemes include ASCII)
   ---------- ----------------------------------------------------------------
@@ -1281,7 +1281,7 @@ the data contains non-default character set characters). In this case, the
 default character set applies (see Table : Default Character Sets above).
 
 If no ECI is specified or a value of 0 is given, and the data does contain
-characters other than in the default character set, then Zint will automatically
+characters other than in the default character set, then ஃஎண் will automatically
 insert the appropriate single-byte ECI if possible (ECIs 3 to 24, excluding ECI
 20), or failing that ECI 26 (UTF-8). A warning will be generated. This mechanism
 is not applied if the --binary option is given.
@@ -1302,19 +1302,19 @@ ISO/IEC 8859-15 codepoint hex "A4". It is encoded in UTF-8 as the hex sequence:
 "E2 82 AC". Those 3 bytes are contained in the file "utf8euro.txt". This command
 will generate the corresponding code:
 
-    zint -b 71 --scale=10 --eci=17 -i utf8euro.txt
+    ஃஎண் -b 71 --scale=10 --eci=17 -i utf8euro.txt
 
 This is equivalent to the commands (using the --esc switch):
 
-    zint -b 71 --scale=10 --eci=17 --esc -d "\xE2\x82\xAC"
+    ஃஎண் -b 71 --scale=10 --eci=17 --esc -d "\xE2\x82\xAC"
 
-    zint -b 71 --scale=10 --eci=17 --esc -d "\u20AC"
+    ஃஎண் -b 71 --scale=10 --eci=17 --esc -d "\u20AC"
 
 and to the command:
 
-    zint -b 71 --scale=10 --eci=17 -d "€"
+    ஃஎண் -b 71 --scale=10 --eci=17 -d "€"
 
-[zint -b DATAMATRIX --eci=17 -d "€"]
+[ஃஎண் -b DATAMATRIX --eci=17 -d "€"]
 
 4.10.2.2 Input Modes and ECI Example 2
 
@@ -1323,21 +1323,21 @@ encoding. The Big5 representation of this character is the two hex bytes:
 "B1 60" (contained in the file "big5char.txt"). The generation command for Data
 Matrix is:
 
-    zint -b 71 --scale=10 --eci=28 --binary -i big5char.txt
+    ஃஎண் -b 71 --scale=10 --eci=28 --binary -i big5char.txt
 
 This is equivalent to the command (using the --esc switch):
 
-    zint -b 71 --scale=10 --eci=28 --binary --esc -d "\xB1\x60"
+    ஃஎண் -b 71 --scale=10 --eci=28 --binary --esc -d "\xB1\x60"
 
 and to the commands (no --binary switch so conversion occurs):
 
-    zint -b 71 --scale=10 --eci=28 --esc -d "\xE5\xB8\xB8"
+    ஃஎண் -b 71 --scale=10 --eci=28 --esc -d "\xE5\xB8\xB8"
 
-    zint -b 71 --scale=10 --eci=28 --esc -d "\u5E38"
+    ஃஎண் -b 71 --scale=10 --eci=28 --esc -d "\u5E38"
 
-    zint -b 71 --scale=10 --eci=28 -d "常"
+    ஃஎண் -b 71 --scale=10 --eci=28 -d "常"
 
-[zint -b DATAMATRIX --eci=28 -d "\u5E38" --esc]
+[ஃஎண் -b DATAMATRIX --eci=28 -d "\u5E38" --esc]
 
 4.10.2.3 Input Modes and ECI Example 3
 
@@ -1345,21 +1345,21 @@ Some decoders (in particular mobile app ones) for QR Code assume UTF-8 encoding
 by default and do not support ECI. In this case supply UTF-8 data and use the
 --binary switch so that the data will be encoded as UTF-8 without conversion:
 
-    zint -b 58 --binary -d "UTF-8 data"
+    ஃஎண் -b 58 --binary -d "UTF-8 data"
 
-[zint -b QRCODE --binary -d "\xE2\x82\xAC\xE5\xB8\xB8" --esc]
+[ஃஎண் -b QRCODE --binary -d "\xE2\x82\xAC\xE5\xB8\xB8" --esc]
 
 4.11 Batch Processing
 
 Data can be batch processed by reading from a text file and producing a separate
 barcode image for each line of text in that file. To do this use the --batch
-switch. To select the input file from which to read data use the -i option. Zint
+switch. To select the input file from which to read data use the -i option. ஃஎண்
 will automatically detect the end of a line of text (in either Unix or Windows
 formatted text files) and produce a symbol each time it finds this. Input files
-should end with a line feed character - if this is not present then Zint will
+should end with a line feed character - if this is not present then ஃஎண் will
 not encode the last line of text, and will warn you that there is a problem.
 
-By default Zint will output numbered filenames starting with 00001.png,
+By default ஃஎண் will output numbered filenames starting with 00001.png,
 00002.png etc. To change this behaviour use the -o option in combination with
 --batch using special characters in the output filename as shown in the table
 below:
@@ -1403,7 +1403,7 @@ image (or GIF image if libpng is not present), but this can be altered by
 supplementing the --direct option with a --filetype option followed by the
 suffix of the file type required. For example:
 
-    zint -b 84 --direct --filetype=pcx -d "Data to encode"
+    ஃஎண் -b 84 --direct --filetype=pcx -d "Data to encode"
 
 This command will output the symbol as a PCX file to stdout. The currently
 supported output file formats are shown in the following table.
@@ -1431,7 +1431,7 @@ in a pipe can have unpredictable results. Use with care!
 
 4.13 Automatic Filenames
 
-The --mirror option instructs Zint to use the data to be encoded as an indicator
+The --mirror option instructs ஃஎண் to use the data to be encoded as an indicator
 of the filename to be used. This is particularly useful if you are processing
 batch data. For example the input data "1234567" will result in a file named
 "1234567.png".
@@ -1455,7 +1455,7 @@ dot size is 0.01, the maximum is 20. The default size is 0.8.
 
 The default and minimum scale for raster output in dotty mode is 1.
 
-[zint -b CODEONE -d "123456789012345678" --dotty --vers=9]
+[ஃஎண் -b CODEONE -d "123456789012345678" --dotty --vers=9]
 
 4.15 Multiple Segments
 
@@ -1466,16 +1466,16 @@ the data to which this applies. This is in addition to the ECI and data
 specified using the --eci and -d options which must still be present and which
 in effect constitute segment 0. For instance
 
-    zint -b AZTEC_CODE --eci=9 -d "Κείμενο" --seg1=7,"Текст" --seg2=20,"文章"
+    ஃஎண் -b AZTEC_CODE --eci=9 -d "Κείμενο" --seg1=7,"Текст" --seg2=20,"文章"
 
 specifies 3 segments: segment 0 with ECI 9 (Greek), segment 1 with ECI 7
 (Cyrillic), and segment 2 with ECI 20 (Shift JIS). Segments must be consecutive.
 
 The symbology must be ECI-aware (see Table : ECI-Aware Symbologies).
 
-[zint -b AZTEC --eci=9 -d "Κείμενο" --seg1=7,"Текст" --seg2=20,"文章"]
+[ஃஎண் -b AZTEC --eci=9 -d "Κείμενο" --seg1=7,"Текст" --seg2=20,"文章"]
 
-ECIs of zero may be given, in which case Zint will automatically determine an
+ECIs of zero may be given, in which case ஃஎண் will automatically determine an
 ECI if necessary, as described in section 4.10.2 Input Modes and ECI.
 
 Multiple segments are not currently supported for use with GS1 data.
@@ -1492,7 +1492,7 @@ and has the format
 
     --structapp=I,C[,ID]
 
-[zint -b DATAMATRIX -d "2nd of 3" --structapp="2,3,5006"]
+[ஃஎண் -b DATAMATRIX -d "2nd of 3" --structapp="2,3,5006"]
 
 where I is the index (position) of the symbol in the Structured Append sequence,
 C is the count or total number of symbols in the sequence, and ID is an optional
@@ -1522,9 +1522,9 @@ The text can be set to bold using the --bold option, or a smaller font can be
 substituted using the --small option. The --bold and --small options can be used
 together if required, but only for vector output.
 
-[zint --bold -d "This Text" --small]
+[ஃஎண் --bold -d "This Text" --small]
 
-Zint can output a representation of the symbol data as a set of hexadecimal
+ஃஎண் can output a representation of the symbol data as a set of hexadecimal
 values if asked to output to a text file ("*.txt") or if given the option
 --filetype=txt. This can be used for test and diagnostic purposes.
 
@@ -1539,29 +1539,29 @@ this guide.
 
 5. Using the API
 
-Zint has been written using the C language and has an API for use with C/C++
+ஃஎண் has been written using the C language and has an API for use with C/C++
 language programs. A Qt interface is available in the "backend_qt"
 sub-directory, and a Tcl interface is available in the "backend_tcl"
 sub-directory.
 
-The libzint API has been designed to be very similar to that used by the GNU
-Barcode package. This allows easy migration from GNU Barcode to Zint. Zint,
+The libஃஎண் API has been designed to be very similar to that used by the GNU
+Barcode package. This allows easy migration from GNU Barcode to ஃஎண். ஃஎண்,
 however, uses none of the same function names or option names as GNU Barcode.
 This allows you to use both packages in your application without conflict if you
 wish.
 
 5.1 Creating and Deleting Symbols
 
-The symbols manipulated by Zint are held in a zint_symbol structure defined in
-"zint.h". These symbols are created with the ZBarcode_Create() function and
+The symbols manipulated by ஃஎண் are held in a ஃஎண்_symbol structure defined in
+"ஃஎண்.h". These symbols are created with the ZBarcode_Create() function and
 deleted using the ZBarcode_Delete() function. For example the following code
 creates and then deletes a symbol:
 
-    #include <zint.h>
+    #include <ஃஎண்.h>
     #include <stdio.h>
     int main()
     {
-        struct zint_symbol *my_symbol;
+        struct ஃஎண்_symbol *my_symbol;
         my_symbol = ZBarcode_Create();
         if (my_symbol != NULL) {
             printf("Symbol successfully created!\n");
@@ -1570,10 +1570,10 @@ creates and then deletes a symbol:
         return 0;
     }
 
-When compiling this code it will need to be linked with the libzint library
-using the -lzint option:
+When compiling this code it will need to be linked with the libஃஎண் library
+using the -lஃஎண் option:
 
-    gcc -o simple simple.c -lzint
+    gcc -o simple simple.c -lஃஎண்
 
 5.2 Encoding and Saving to File
 
@@ -1583,10 +1583,10 @@ code takes a string from the command line and outputs a Code 128 symbol in a PNG
 file named "out.png" (or a GIF file called "out.gif" if libpng is not present)
 in the current working directory:
 
-    #include <zint.h>
+    #include <ஃஎண்.h>
     int main(int argc, char **argv)
     {
-        struct zint_symbol *my_symbol;
+        struct ஃஎண்_symbol *my_symbol;
         my_symbol = ZBarcode_Create();
         ZBarcode_Encode(my_symbol, argv[1], 0);
         ZBarcode_Print(my_symbol, 0);
@@ -1597,10 +1597,10 @@ in the current working directory:
 This can also be done in one stage using the ZBarcode_Encode_and_Print()
 function as shown in the next example:
 
-    #include <zint.h>
+    #include <ஃஎண்.h>
     int main(int argc, char **argv)
     {
-        struct zint_symbol *my_symbol;
+        struct ஃஎண்_symbol *my_symbol;
         my_symbol = ZBarcode_Create();
         ZBarcode_Encode_and_Print(my_symbol, argv[1], 0, 0);
         ZBarcode_Delete(my_symbol);
@@ -1608,30 +1608,30 @@ function as shown in the next example:
     }
 
 Note that when using the API, the input data is assumed to be 8-bit binary
-unless the input_mode variable in the zint_symbol structure is set - see 5.10
+unless the input_mode variable in the ஃஎண்_symbol structure is set - see 5.10
 Setting the Input Mode for details.
 
 5.3 Encoding and Printing Functions in Depth
 
 The functions for encoding and printing barcodes are defined as:
 
-    int ZBarcode_Encode(struct zint_symbol *symbol,
+    int ZBarcode_Encode(struct ஃஎண்_symbol *symbol,
           const unsigned char *source, int length);
 
-    int ZBarcode_Encode_File(struct zint_symbol *symbol,
+    int ZBarcode_Encode_File(struct ஃஎண்_symbol *symbol,
           const char *filename);
 
-    int ZBarcode_Print(struct zint_symbol *symbol, int rotate_angle);
+    int ZBarcode_Print(struct ஃஎண்_symbol *symbol, int rotate_angle);
 
-    int ZBarcode_Encode_and_Print(struct zint_symbol *symbol,
+    int ZBarcode_Encode_and_Print(struct ஃஎண்_symbol *symbol,
           const unsigned char *source, int length, int rotate_angle);
 
-    int ZBarcode_Encode_File_and_Print(struct zint_symbol *symbol,
+    int ZBarcode_Encode_File_and_Print(struct ஃஎண்_symbol *symbol,
           const char *filename, int rotate_angle);
 
 In these definitions length can be used to set the length of the input string.
 This allows the encoding of NUL (ASCII 0) characters in those symbologies which
-allow this. A value of 0 will disable this usage and Zint will encode data up to
+allow this. A value of 0 will disable this usage and ஃஎண் will encode data up to
 the first NUL character in the input string, which must be present.
 
 The rotate_angle value can be used to rotate the image when outputting. Valid
@@ -1641,22 +1641,22 @@ The ZBarcode_Encode_File() and ZBarcode_Encode_File_and_Print() functions can be
 used to encode data read directly from a text file where the filename is given
 in the NUL-terminated filename string.
 
-If printing more than one barcode, the zint_symbol structure may be re-used by
+If printing more than one barcode, the ஃஎண்_symbol structure may be re-used by
 calling the ZBarcode_Clear() function after each barcode to free any output
-buffers allocated. The zint_symbol input variables must be reset.
+buffers allocated. The ஃஎண்_symbol input variables must be reset.
 
 5.4 Buffering Symbols in Memory (raster)
 
-In addition to saving barcode images to file Zint allows you to access a
+In addition to saving barcode images to file ஃஎண் allows you to access a
 representation of the resulting bitmap image in memory. The following functions
 allow you to do this:
 
-    int ZBarcode_Buffer(struct zint_symbol *symbol, int rotate_angle);
+    int ZBarcode_Buffer(struct ஃஎண்_symbol *symbol, int rotate_angle);
 
-    int ZBarcode_Encode_and_Buffer(struct zint_symbol *symbol,
+    int ZBarcode_Encode_and_Buffer(struct ஃஎண்_symbol *symbol,
           const unsigned char *source, int length, int rotate_angle);
 
-    int ZBarcode_Encode_File_and_Buffer(struct zint_symbol *symbol,
+    int ZBarcode_Encode_File_and_Buffer(struct ஃஎண்_symbol *symbol,
           const char *filename, int rotate_angle);
 
 The arguments here are the same as above. The difference is that instead of
@@ -1704,12 +1704,12 @@ Symbols can also be saved to memory in a vector representation as well as a
 bitmap one. The following functions, exactly analogous to the ones above, allow
 you to do this:
 
-    int ZBarcode_Buffer_Vector(struct zint_symbol *symbol, int rotate_angle);
+    int ZBarcode_Buffer_Vector(struct ஃஎண்_symbol *symbol, int rotate_angle);
 
-    int ZBarcode_Encode_and_Buffer_Vector(struct zint_symbol *symbol,
+    int ZBarcode_Encode_and_Buffer_Vector(struct ஃஎண்_symbol *symbol,
           const unsigned char *source, int length, int rotate_angle);
 
-    int ZBarcode_Encode_File_and_Buffer_Vector(struct zint_symbol *symbol,
+    int ZBarcode_Encode_File_and_Buffer_Vector(struct ஃஎண்_symbol *symbol,
           const char *filename, int rotate_angle);
 
 Here the vector pointer is set to a header which contains pointers to lists of
@@ -1720,10 +1720,10 @@ system. For instance, to draw a barcode using a rendering system with
 prepare_canvas(), draw_rect(), draw_hexagon(), draw_string(), and draw_circle()
 routines available:
 
-    struct zint_vector_rect *rect;
-    struct zint_vector_hexagon *hexagon;
-    struct zint_vector_string *string;
-    struct zint_vector_circle *circle;
+    struct ஃஎண்_vector_rect *rect;
+    struct ஃஎண்_vector_hexagon *hexagon;
+    struct ஃஎண்_vector_string *string;
+    struct ஃஎண்_vector_circle *circle;
 
     prepare_canvas(my_symbol->vector->width, my_symbol->vector->height,
                    my_symbol->scale, my_symbol->fgcolour, my_symbol->bgcolor,
@@ -1752,8 +1752,8 @@ routines available:
 So far our application is not very useful unless we plan to only make Code 128
 symbols and we don’t mind that they only save to "out.png". As with the CLI
 program, of course, these options can be altered. The way this is done is by
-altering the contents of the zint_symbol structure between the creation and
-encoding stages. The zint_symbol structure consists of the following variables:
+altering the contents of the ஃஎண்_symbol structure between the creation and
+encoding stages. The ஃஎண்_symbol structure consists of the following variables:
 
   ---------------------------------------------------------------------------------
   Variable Name         Type         Meaning                      Default Value
@@ -1839,7 +1839,7 @@ encoding stages. The zint_symbol structure consists of the following variables:
                         structure
 
   warn_level            integer      Affects error/warning value  WARN_DEFAULT
-                                     returned by Zint API (see
+                                     returned by ஃஎண் API (see
                                      5.7 Handling Errors).
 
   text                  unsigned     Human Readable Text, which   "" (empty)
@@ -1890,17 +1890,17 @@ encoding stages. The zint_symbol structure consists of the following variables:
                         structure    vector elements.
   ---------------------------------------------------------------------------------
 
-  : Table  : API Structure zint_symbol
+  : Table  : API Structure ஃஎண்_symbol
 
 To alter these values use the syntax shown in the example below. This code has
 the same result as the previous example except the output is now taller and
 plotted in green.
 
-    #include <zint.h>
+    #include <ஃஎண்.h>
     #include <string.h>
     int main(int argc, char **argv)
     {
-        struct zint_symbol *my_symbol;
+        struct ஃஎண்_symbol *my_symbol;
         my_symbol = ZBarcode_Create();
         strcpy(my_symbol->fgcolour, "00ff00");
         my_symbol->height = 400.0f;
@@ -1919,78 +1919,78 @@ ignored:
 
 If errors occur during encoding a non-zero integer value is passed back to the
 calling application. In addition the errtxt variable is used to give a message
-detailing the nature of the error. The errors generated by Zint are given in the
+detailing the nature of the error. The errors generated by ஃஎண் are given in the
 table below:
 
   -------------------------------------------------------------------------------
   Return Value                   Meaning
   ------------------------------ ------------------------------------------------
-  ZINT_WARN_INVALID_OPTION       One of the values in zint_struct was set
-                                 incorrectly but Zint has made a guess at what it
+  ஃஎண்_WARN_INVALID_OPTION       One of the values in ஃஎண்_struct was set
+                                 incorrectly but ஃஎண் has made a guess at what it
                                  should have been and generated a barcode
                                  accordingly.
 
-  ZINT_WARN_USES_ECI             Zint has automatically inserted an ECI
+  ஃஎண்_WARN_USES_ECI             ஃஎண் has automatically inserted an ECI
                                  character. The symbol may not be readable with
                                  some readers.
 
-  ZINT_WARN_NONCOMPLIANT         The symbol was created but is not compliant with
+  ஃஎண்_WARN_NONCOMPLIANT         The symbol was created but is not compliant with
                                  certain standards set in its specification (e.g.
                                  height, GS1 AI data lengths).
 
-  ZINT_ERROR                     Marks the divide between warnings and errors.
+  ஃஎண்_ERROR                     Marks the divide between warnings and errors.
                                  For return values greater than or equal to this
                                  no symbol (or only an incomplete symbol) is
                                  generated.
 
-  ZINT_ERROR_TOO_LONG            The input data is too long or too short for the
+  ஃஎண்_ERROR_TOO_LONG            The input data is too long or too short for the
                                  selected symbology. No symbol has been
                                  generated.
 
-  ZINT_ERROR_INVALID_DATA        The data to be encoded includes characters which
+  ஃஎண்_ERROR_INVALID_DATA        The data to be encoded includes characters which
                                  are not permitted by the selected symbology
                                  (e.g. alphabetic characters in an EAN symbol).
                                  No symbol has been generated.
 
-  ZINT_ERROR_INVALID_CHECK       Data with an incorrect check digit has been
+  ஃஎண்_ERROR_INVALID_CHECK       Data with an incorrect check digit has been
                                  entered. No symbol has been generated.
 
-  ZINT_ERROR_INVALID_OPTION      One of the values in zint_struct was set
-                                 incorrectly and Zint was unable to guess what it
+  ஃஎண்_ERROR_INVALID_OPTION      One of the values in ஃஎண்_struct was set
+                                 incorrectly and ஃஎண் was unable to guess what it
                                  should have been. No symbol has been generated.
 
-  ZINT_ERROR_ENCODING_PROBLEM    A problem has occurred during encoding of the
+  ஃஎண்_ERROR_ENCODING_PROBLEM    A problem has occurred during encoding of the
                                  data. This should never happen. Please contact
                                  the developer if you encounter this error.
 
-  ZINT_ERROR_FILE_ACCESS         Zint was unable to open the requested output
+  ஃஎண்_ERROR_FILE_ACCESS         ஃஎண் was unable to open the requested output
                                  file. This is usually a file permissions
                                  problem.
 
-  ZINT_ERROR_MEMORY              Zint ran out of memory. This should only be a
+  ஃஎண்_ERROR_MEMORY              ஃஎண் ran out of memory. This should only be a
                                  problem with legacy systems.
 
-  ZINT_ERROR_FILE_WRITE          Zint failed to write all contents to the
+  ஃஎண்_ERROR_FILE_WRITE          ஃஎண் failed to write all contents to the
                                  requested output file. This should only occur if
                                  the output device becomes full.
 
-  ZINT_ERROR_USES_ECI            Returned if warn_level set to WARN_FAIL_ALL and
-                                 ZINT_WARN_USES_ECI occurs.
+  ஃஎண்_ERROR_USES_ECI            Returned if warn_level set to WARN_FAIL_ALL and
+                                 ஃஎண்_WARN_USES_ECI occurs.
 
-  ZINT_ERROR_NONCOMPLIANT        Returned if warn_level set to WARN_FAIL_ALL and
-                                 ZINT_WARN_NONCOMPLIANT occurs.
+  ஃஎண்_ERROR_NONCOMPLIANT        Returned if warn_level set to WARN_FAIL_ALL and
+                                 ஃஎண்_WARN_NONCOMPLIANT occurs.
   -------------------------------------------------------------------------------
 
   : Table : API Warning and Error Return Values:
 
 To catch errors use an integer variable as shown in the code below:
 
-    #include <zint.h>
+    #include <ஃஎண்.h>
     #include <stdio.h>
     #include <string.h>
     int main(int argc, char **argv)
     {
-        struct zint_symbol *my_symbol;
+        struct ஃஎண்_symbol *my_symbol;
         int error;
         my_symbol = ZBarcode_Create();
         strcpy(my_symbol->fgcolour, "nonsense");
@@ -1999,7 +1999,7 @@ To catch errors use an integer variable as shown in the code below:
             /* some warning or error occurred */
             printf("%s\n", my_symbol->errtxt);
         }
-        if (error >= ZINT_ERROR) {
+        if (error >= ஃஎண்_ERROR) {
             /* stop now */
             ZBarcode_Delete(my_symbol);
             return 1;
@@ -2149,26 +2149,26 @@ set to the overall height on output).
 
 For input data requiring multiple ECIs, the following functions may be used:
 
-    int ZBarcode_Encode_Segs(struct zint_symbol *symbol,
-          const struct zint_seg segs[], const int seg_count);
+    int ZBarcode_Encode_Segs(struct ஃஎண்_symbol *symbol,
+          const struct ஃஎண்_seg segs[], const int seg_count);
 
-    int ZBarcode_Encode_Segs_and_Print(struct zint_symbol *symbol,
-          const struct zint_seg segs[], const int seg_count, int rotate_angle);
+    int ZBarcode_Encode_Segs_and_Print(struct ஃஎண்_symbol *symbol,
+          const struct ஃஎண்_seg segs[], const int seg_count, int rotate_angle);
 
-    int ZBarcode_Encode_Segs_and_Buffer(struct zint_symbol *symbol,
-          const struct zint_seg segs[], const int seg_count, int rotate_angle);
+    int ZBarcode_Encode_Segs_and_Buffer(struct ஃஎண்_symbol *symbol,
+          const struct ஃஎண்_seg segs[], const int seg_count, int rotate_angle);
 
-    int ZBarcode_Encode_Segs_and_Buffer_Vector(struct zint_symbol *symbol,
-          const struct zint_seg segs[], const int seg_count, int rotate_angle);
+    int ZBarcode_Encode_Segs_and_Buffer_Vector(struct ஃஎண்_symbol *symbol,
+          const struct ஃஎண்_seg segs[], const int seg_count, int rotate_angle);
 
 These are direct analogues of the previously mentioned ZBarcode_Encode(),
 ZBarcode_Encode_and_Print(), ZBarcode_Encode_and_Buffer() and
 ZBarcode_Encode_and_Buffer_Vector() respectively, where instead of a pair
 consisting of "source, length", a pair consisting of "segs, seg_count" is given,
-with segs being an array of struct zint_seg segments and seg_count being the
-number of elements it contains. The zint_seg structure is of the form:
+with segs being an array of struct ஃஎண்_seg segments and seg_count being the
+number of elements it contains. The ஃஎண்_seg structure is of the form:
 
-    struct zint_seg {
+    struct ஃஎண்_seg {
         unsigned char *source; /* Data to encode */
         int length;            /* Length of `source`. If 0, `source` must be
                                   NUL-terminated */
@@ -2178,15 +2178,15 @@ number of elements it contains. The zint_seg structure is of the form:
 The symbology must support ECIs (see Table : ECI-Aware Symbologies). For
 example:
 
-    #include <zint.h>
+    #include <ஃஎண்.h>
     int main(int argc, char **argv)
     {
-        struct zint_seg segs[] = {
+        struct ஃஎண்_seg segs[] = {
             { "Κείμενο", 0, 9 },
             { "Текст", 0, 7 },
             { "文章", 0, 20 }
         };
-        struct zint_symbol *my_symbol;
+        struct ஃஎண்_symbol *my_symbol;
         my_symbol = ZBarcode_Create();
         my_symbol->symbology = BARCODE_AZTEC;
         my_symbol->input_mode = UNICODE_MODE;
@@ -2212,7 +2212,7 @@ To help with scaling the output, the following three function are available:
             float x_dim_mm_or_dpmm, const char *filetype);
 
 The first ZBarcode_Default_Xdim() returns the default X-dimension suggested by
-Zint for symbology symbol_id.
+ஃஎண் for symbology symbol_id.
 
 The second ZBarcode_Scale_From_XdimDp() returns the scale to use to output to a
 file of type filetype with X-dimension x_dim_mm at dpmm dots per mm. The given
@@ -2284,65 +2284,65 @@ see which are set.
   -------------------------------------------------------------------------------
   Value                       Meaning
   --------------------------- ---------------------------------------------------
-  ZINT_CAP_HRT                Can the symbology print Human Readable Text?
+  ஃஎண்_CAP_HRT                Can the symbology print Human Readable Text?
 
-  ZINT_CAP_STACKABLE          Is the symbology stackable?
+  ஃஎண்_CAP_STACKABLE          Is the symbology stackable?
 
-  ZINT_CAP_EXTENDABLE         Is the symbology extendable with add-on data? (i.e.
+  ஃஎண்_CAP_EXTENDABLE         Is the symbology extendable with add-on data? (i.e.
                               is it EAN/UPC?)
 
-  ZINT_CAP_COMPOSITE          Does the symbology support composite data? (see 6.3
+  ஃஎண்_CAP_COMPOSITE          Does the symbology support composite data? (see 6.3
                               GS1 Composite Symbols (ISO 24723) below)
 
-  ZINT_CAP_ECI                Does the symbology support Extended Channel
+  ஃஎண்_CAP_ECI                Does the symbology support Extended Channel
                               Interpretations?
 
-  ZINT_CAP_GS1                Does the symbology support GS1 data?
+  ஃஎண்_CAP_GS1                Does the symbology support GS1 data?
 
-  ZINT_CAP_DOTTY              Can the symbology be outputted as dots?
+  ஃஎண்_CAP_DOTTY              Can the symbology be outputted as dots?
 
-  ZINT_CAP_QUIET_ZONES        Does the symbology have default quiet zones?
+  ஃஎண்_CAP_QUIET_ZONES        Does the symbology have default quiet zones?
 
-  ZINT_CAP_FIXED_RATIO        Does the symbology have a fixed width-to-height
+  ஃஎண்_CAP_FIXED_RATIO        Does the symbology have a fixed width-to-height
                               (aspect) ratio?
 
-  ZINT_CAP_READER_INIT        Does the symbology support Reader Initialisation?
+  ஃஎண்_CAP_READER_INIT        Does the symbology support Reader Initialisation?
 
-  ZINT_CAP_FULL_MULTIBYTE     Is the ZINT_FULL_MULTIBYTE option applicable?
+  ஃஎண்_CAP_FULL_MULTIBYTE     Is the ஃஎண்_FULL_MULTIBYTE option applicable?
 
-  ZINT_CAP_MASK               Is mask selection applicable?
+  ஃஎண்_CAP_MASK               Is mask selection applicable?
 
-  ZINT_CAP_STRUCTAPP          Does the symbology support Structured Append?
+  ஃஎண்_CAP_STRUCTAPP          Does the symbology support Structured Append?
 
-  ZINT_CAP_COMPLIANT_HEIGHT   Does the symbology have a compliant height defined?
+  ஃஎண்_CAP_COMPLIANT_HEIGHT   Does the symbology have a compliant height defined?
   -------------------------------------------------------------------------------
 
   : Table : API Capability Flags:
 
 For example:
 
-    unsigned int cap = ZBarcode_Cap(BARCODE_PDF417, ZINT_CAP_HRT | ZINT_CAP_ECI);
-    if (cap & ZINT_CAP_HRT) {
+    unsigned int cap = ZBarcode_Cap(BARCODE_PDF417, ஃஎண்_CAP_HRT | ஃஎண்_CAP_ECI);
+    if (cap & ஃஎண்_CAP_HRT) {
         printf("PDF417 supports HRT\n");
     } else {
         printf("PDF417 does not support HRT\n");
     }
-    if (cap & ZINT_CAP_ECI) {
+    if (cap & ஃஎண்_CAP_ECI) {
         printf("PDF417 supports ECI\n");
     } else {
         printf("PDF417 does not support ECI\n");
     }
 
-5.15 Zint Version
+5.15 ஃஎண் Version
 
-Whether the Zint library linked to was built with PNG support may be determined
+Whether the ஃஎண் library linked to was built with PNG support may be determined
 with:
 
     int ZBarcode_NoPng();
 
 which returns 1 if no PNG support is available, else zero.
 
-Lastly, the version of the Zint library linked to is returned by:
+Lastly, the version of the ஃஎண் library linked to is returned by:
 
     int ZBarcode_Version();
 
@@ -2359,7 +2359,7 @@ widths.
 
 6.1.1 Code 11
 
-[zint -b CODE11 -d "9212320967"]
+[ஃஎண் -b CODE11 -d "9212320967"]
 
 Developed by Intermec in 1977, Code 11 is similar to Code 2 of 5 Matrix and is
 primarily used in telecommunications. The symbol can encode data consisting of
@@ -2371,13 +2371,13 @@ option_2 = 2).
 6.1.2 Code 2 of 5
 
 Code 2 of 5 is a family of one-dimensional symbols, 8 of which are supported by
-Zint. Note that the names given to these standards alters from one source to
+ஃஎண். Note that the names given to these standards alters from one source to
 another so you should take care to ensure that you have the right barcode type
 before using these standards.
 
 6.1.2.1 Standard Code 2 of 5
 
-[zint -b C25STANDARD -d "9212320967"]
+[ஃஎண் -b C25STANDARD -d "9212320967"]
 
 Also known as Code 2 of 5 Matrix, this is a self-checking code used in
 industrial applications and photo development. Standard Code 2 of 5 will encode
@@ -2388,7 +2388,7 @@ option_2 = 2).
 
 6.1.2.2 IATA Code 2 of 5
 
-[zint -b C25IATA -d "9212320967"]
+[ஃஎண் -b C25IATA -d "9212320967"]
 
 Used for baggage handling in the air-transport industry by the International Air
 Transport Agency, this self-checking code will encode numeric input (digits 0-9)
@@ -2397,7 +2397,7 @@ options are the same as for 6.1.2.1 Standard Code 2 of 5.
 
 6.1.2.3 Industrial Code 2 of 5
 
-[zint -b C25IND -d "9212320967"]
+[ஃஎண் -b C25IND -d "9212320967"]
 
 Industrial Code 2 of 5 can encode numeric input (digits 0-9) up to a maximum of
 45 digits. No check digit is added by default. Check digit options are the same
@@ -2405,17 +2405,17 @@ as for 6.1.2.1 Standard Code 2 of 5.
 
 6.1.2.4 Interleaved Code 2 of 5 (ISO 16390)
 
-[zint -b C25INTER --compliantheight -d "9212320967"]
+[ஃஎண் -b C25INTER --compliantheight -d "9212320967"]
 
 This self-checking symbology encodes pairs of numbers, and so can only encode an
 even number of digits (0-9). If an odd number of digits is entered a leading
-zero is added by Zint. A maximum of 45 pairs (90 digits) can be encoded. No
+zero is added by ஃஎண். A maximum of 45 pairs (90 digits) can be encoded. No
 check digit is added by default. Check digit options are the same as for 6.1.2.1
 Standard Code 2 of 5.
 
 6.1.2.5 Code 2 of 5 Data Logic
 
-[zint -b C25LOGIC -d "9212320967"]
+[ஃஎண் -b C25LOGIC -d "9212320967"]
 
 Data Logic does not include a check digit by default and can encode numeric
 input (digits 0-9) up to a maximum of 80 digits. Check digit options are the
@@ -2423,57 +2423,57 @@ same as for 6.1.2.1 Standard Code 2 of 5.
 
 6.1.2.6 ITF-14
 
-[zint -b ITF14 --compliantheight -d "9212320967145"]
+[ஃஎண் -b ITF14 --compliantheight -d "9212320967145"]
 
 ITF-14, also known as UPC Shipping Container Symbol or Case Code, is based on
 Interleaved Code 2 of 5 and requires a 13-digit numeric input (digits 0-9). One
-modulo-10 check digit is added by Zint.
+modulo-10 check digit is added by ஃஎண்.
 
-If no border option is specified Zint defaults to adding a bounding box with a
+If no border option is specified ஃஎண் defaults to adding a bounding box with a
 border width of 5. This behaviour can be overridden by using the --bind option
 (API output_options |= BARCODE_BIND). Similarly the border width can be
 overridden using --border (API border_width). If a symbol with no border is
 required this can be achieved by explicitly setting the border type to box (or
 bind or bindtop) and leaving the border width 0.
 
-[zint -b ITF14 --box --compliantheight -d "9212320967145"]
+[ஃஎண் -b ITF14 --box --compliantheight -d "9212320967145"]
 
 6.1.2.7 Deutsche Post Leitcode
 
-[zint -b DPLEIT -d "9212320967145"]
+[ஃஎண் -b DPLEIT -d "9212320967145"]
 
 Leitcode is based on Interleaved Code 2 of 5 and is used by Deutsche Post for
-routing purposes. Leitcode requires a 13-digit numerical input to which Zint
+routing purposes. Leitcode requires a 13-digit numerical input to which ஃஎண்
 adds a check digit.
 
 6.1.2.8 Deutsche Post Identcode
 
-[zint -b DPIDENT -d "91232096712"]
+[ஃஎண் -b DPIDENT -d "91232096712"]
 
 Identcode is based on Interleaved Code 2 of 5 and is used by Deutsche Post for
 identification purposes. Identcode requires an 11-digit numerical input to which
-Zint adds a check digit.
+ஃஎண் adds a check digit.
 
 6.1.3 UPC (Universal Product Code) (ISO 15420)
 
 6.1.3.1 UPC Version A
 
-[zint -b UPCA --compliantheight -d "72527270270"]
+[ஃஎண் -b UPCA --compliantheight -d "72527270270"]
 
 UPC-A is used in the United States for retail applications. The symbol requires
-an 11-digit article number. The check digit is calculated by Zint. In addition
+an 11-digit article number. The check digit is calculated by ஃஎண். In addition
 EAN-2 and EAN-5 add-on symbols can be added using the + character. For example,
 to draw a UPC-A symbol with the data 72527270270 with an EAN-5 add-on showing
 the data 12345 use the command:
 
-    zint -b UPCA -d "72527270270+12345"
+    ஃஎண் -b UPCA -d "72527270270+12345"
 
 or using the API encode a data string with the + character included:
 
     my_symbol->symbology = BARCODE_UPCA;
     error = ZBarcode_Encode_and_Print(my_symbol, "72527270270+12345", 0, 0);
 
-[zint -b UPCA --compliantheight -d "72527270270+12345"]
+[ஃஎண் -b UPCA --compliantheight -d "72527270270+12345"]
 
 If your input data already includes the check digit symbology BARCODE_UPCA_CHK
 (35) can be used which takes a 12-digit input and validates the check digit
@@ -2487,15 +2487,15 @@ between 0 and 20 (default 5).
 
 6.1.3.2 UPC Version E
 
-[zint -b UPCE --compliantheight -d "1123456"]
+[ஃஎண் -b UPCE --compliantheight -d "1123456"]
 
 UPC-E is a zero-compressed version of UPC-A developed for smaller packages. The
 code requires a 6-digit article number (digits 0-9). The check digit is
-calculated by Zint. EAN-2 and EAN-5 add-on symbols can be added using the +
-character as with UPC-A. In addition Zint also supports Number System 1 encoding
+calculated by ஃஎண். EAN-2 and EAN-5 add-on symbols can be added using the +
+character as with UPC-A. In addition ஃஎண் also supports Number System 1 encoding
 by entering a 7-digit article number starting with the digit 1. For example:
 
-    zint -b UPCE -d "1123456"
+    ஃஎண் -b UPCE -d "1123456"
 
 or
 
@@ -2516,21 +2516,21 @@ between 0 and 20 (default 5).
 
 6.1.4.1 EAN-2, EAN-5, EAN-8 and EAN-13
 
-[zint -b EANX --compliantheight -d "4512345678906"]
+[ஃஎண் -b EANX --compliantheight -d "4512345678906"]
 
 The EAN system is used in retail across Europe and includes standards for EAN-2,
 EAN-5, EAN-8 and EAN-13 which encode 2, 5, 7 or 12-digit numbers respectively.
-Zint will decide which symbology to use depending on the length of the input
+ஃஎண் will decide which symbology to use depending on the length of the input
 data. In addition EAN-2 and EAN-5 add-on symbols can be added to EAN-8 and
 EAN-13 symbols using the + character as with UPC symbols. For example:
 
-    zint -b EANX -d "54321"
+    ஃஎண் -b EANX -d "54321"
 
-[zint -b EANX --compliantheight -d "54321"]
+[ஃஎண் -b EANX --compliantheight -d "54321"]
 
 will encode a stand-alone EAN-5, whereas
 
-    zint -b EANX -d "7432365+54321"
+    ஃஎண் -b EANX -d "7432365+54321"
 
 will encode an EAN-8 symbol with an EAN-5 add-on. As before these results can be
 achieved using the API:
@@ -2541,9 +2541,9 @@ achieved using the API:
 
     error = ZBarcode_Encode_and_Print(my_symbol, "7432365+54321", 0, 0);
 
-[zint -b EANX --compliantheight -d "7432365+54321"]
+[ஃஎண் -b EANX --compliantheight -d "7432365+54321"]
 
-All of the EAN symbols include check digits which are added by Zint.
+All of the EAN symbols include check digits which are added by ஃஎண்.
 
 If you are encoding an EAN-8 or EAN-13 symbol and your data already includes the
 check digit then you can use symbology BARCODE_EANX_CHK (14) which takes an 8 or
@@ -2554,7 +2554,7 @@ as for 6.1.3.2 UPC Version E.
 
 6.1.4.2 SBN, ISBN and ISBN-13
 
-[zint -b ISBNX --compliantheight -d "9789295055124"]
+[ஃஎண் -b ISBNX --compliantheight -d "9789295055124"]
 
 EAN-13 symbols (also known as Bookland EAN-13) can also be produced from 9-digit
 SBN, 10-digit ISBN or 13-digit ISBN-13 data. The relevant check digit needs to
@@ -2567,7 +2567,7 @@ and the guard bar descent height - see 6.1.3.2 UPC Version E.
 
 6.1.5.1 UK Plessey
 
-[zint -b PLESSEY -d "C64"]
+[ஃஎண் -b PLESSEY -d "C64"]
 
 Also known as Plessey Code, this symbology was developed by the Plessey Company
 Ltd. in the UK. The symbol can encode data consisting of digits (0-9) or letters
@@ -2575,7 +2575,7 @@ A-F up to a maximum of 65 characters and includes a CRC check digit.
 
 6.1.5.2 MSI Plessey
 
-[zint -b MSI_PLESSEY -d "6502" --vers=2]
+[ஃஎண் -b MSI_PLESSEY -d "6502" --vers=2]
 
 Based on Plessey and developed by MSI Data Corporation, MSI Plessey has a range
 of check digit options that are selectable by setting --vers (API option_2).
@@ -2602,28 +2602,28 @@ modulo-10 check digits.
 
 6.1.6.1 Telepen Alpha
 
-[zint -b TELEPEN --compliantheight -d "Z80"]
+[ஃஎண் -b TELEPEN --compliantheight -d "Z80"]
 
 Telepen Alpha was developed by SB Electronic Systems Limited and can encode
 ASCII text input, up to a maximum of 30 characters. Telepen includes a
-modulo-127 check digit, added by Zint.
+modulo-127 check digit, added by ஃஎண்.
 
 6.1.6.2 Telepen Numeric
 
-[zint -b TELEPEN_NUM --compliantheight -d "466X33"]
+[ஃஎண் -b TELEPEN_NUM --compliantheight -d "466X33"]
 
 Telepen Numeric allows compression of numeric data into a Telepen symbol. Data
 can consist of pairs of numbers or pairs consisting of a numerical digit
 followed an X character. For example: 466333 and 466X33 are valid codes whereas
 46X333 is not (the digit pair "X3" is not valid). Up to 60 digits can be
 encoded. Telepen Numeric includes a modulo-127 check digit which is added by
-Zint.
+ஃஎண்.
 
 6.1.7 Code 39
 
 6.1.7.1 Standard Code 39 (ISO 16388)
 
-[zint -b CODE39 --compliantheight -d "1A" --vers=1]
+[ஃஎண் -b CODE39 --compliantheight -d "1A" --vers=1]
 
 Standard Code 39 was developed in 1974 by Intermec. Input data can be up to 85
 characters in length and can include the characters 0-9, A-Z, dash (-), full
@@ -2633,7 +2633,7 @@ added if desired by setting --vers=1 (API option_2 = 1).
 
 6.1.7.2 Extended Code 39
 
-[zint -b EXCODE39 --compliantheight -d "123.45$@fd"]
+[ஃஎண் -b EXCODE39 --compliantheight -d "123.45$@fd"]
 
 Also known as Code 39e and Code39+, this symbology expands on Standard Code 39
 to provide support for the full 7-bit ASCII character set. The standard does not
@@ -2642,21 +2642,21 @@ require a check digit but a modulo-43 check digit can be added by setting
 
 6.1.7.3 Code 93
 
-[zint -b CODE93 --compliantheight -d "C93"]
+[ஃஎண் -b CODE93 --compliantheight -d "C93"]
 
 A variation of Extended Code 39, Code 93 also supports full ASCII text. Two
-check characters are added by Zint. By default these check characters are not
+check characters are added by ஃஎண். By default these check characters are not
 shown in the Human Readable Text, but may be shown by setting --vers=1 (API
 option_2 = 1).
 
 6.1.7.4 PZN (Pharmazentralnummer)
 
-[zint -b PZN --compliantheight -d "2758089"]
+[ஃஎண் -b PZN --compliantheight -d "2758089"]
 
 PZN is a Code 39 based symbology used by the pharmaceutical industry in Germany.
-PZN encodes a 7-digit number to which Zint will add a modulo-11 check digit
+PZN encodes a 7-digit number to which ஃஎண் will add a modulo-11 check digit
 (PZN8). Input less than 7 digits will be zero-filled. An 8-digit input can be
-supplied in which case Zint will validate the check digit.
+supplied in which case ஃஎண் will validate the check digit.
 
 To encode a PZN7 (obsolete since 2013) instead set --vers=1 (API option_2 = 1)
 and supply up to 7 digits. As with PZN8, a modulo-11 check digit will be added
@@ -2664,7 +2664,7 @@ or if 7 digits supplied the check digit validated.
 
 6.1.7.5 LOGMARS
 
-[zint -b LOGMARS --compliantheight -d "12345/ABCDE" --vers=1]
+[ஃஎண் -b LOGMARS --compliantheight -d "12345/ABCDE" --vers=1]
 
 LOGMARS (Logistics Applications of Automated Marking and Reading Symbols) is a
 variation of the Code 39 symbology used by the U.S. Department of Defense.
@@ -2674,16 +2674,16 @@ option_2 = 1).
 
 6.1.7.6 Code 32
 
-[zint -b CODE32 --compliantheight -d "14352312"]
+[ஃஎண் -b CODE32 --compliantheight -d "14352312"]
 
 A variation of Code 39 used by the Italian Ministry of Health (“Ministero della
 Sanità”) for encoding identifiers on pharmaceutical products. This symbology
 requires a numeric input up to 8 digits in length. A check digit is added by
-Zint.
+ஃஎண்.
 
 6.1.7.7 HIBC Code 39
 
-[zint -b HIBC_39 --compliantheight -d "14352312"]
+[ஃஎண் -b HIBC_39 --compliantheight -d "14352312"]
 
 This variant adds a leading '+' character and a trailing modulo-49 check digit
 to a standard Code 39 symbol as required by the Health Industry Barcode
@@ -2691,7 +2691,7 @@ standards.
 
 6.1.7.8 Vehicle Identification Number (VIN)
 
-[zint -b VIN -d "2FTPX28L0XCA15511" --vers=1]
+[ஃஎண் -b VIN -d "2FTPX28L0XCA15511" --vers=1]
 
 A variation of Code 39 that for vehicle identification numbers used in North
 America (first character '1' to '5') has a check character verification stage. A
@@ -2701,7 +2701,7 @@ option_2 = 1).
 
 6.1.8 Codabar (EN 798)
 
-[zint -b CODABAR --compliantheight -d "A37859B"]
+[ஃஎண் -b CODABAR --compliantheight -d "A37859B"]
 
 Also known as NW-7, Monarch, ABC Codabar, USD-4, Ames Code and Code 27, this
 symbology was developed in 1972 by Monarch Marketing Systems for retail
@@ -2715,7 +2715,7 @@ in the Human Readable Text, set --vers=2 (API option_2 = 2).
 
 6.1.9 Pharmacode
 
-[zint -b PHARMA --compliantheight -d "130170"]
+[ஃஎண் -b PHARMA --compliantheight -d "130170"]
 
 Developed by Laetus, Pharmacode is used for the identification of
 pharmaceuticals. The symbology is able to encode whole numbers between 3 and
@@ -2725,20 +2725,20 @@ pharmaceuticals. The symbology is able to encode whole numbers between 3 and
 
 6.1.10.1 Standard Code 128 (ISO 15417)
 
-[zint -b CODE128 --bind -d "130170X178"]
+[ஃஎண் -b CODE128 --bind -d "130170X178"]
 
 One of the most ubiquitous one-dimensional barcode symbologies, Code 128 was
 developed in 1981 by Computer Identics. This symbology supports full ASCII text
-and uses a three-mode system to compress the data into a smaller symbol. Zint
+and uses a three-mode system to compress the data into a smaller symbol. ஃஎண்
 automatically switches between modes and adds a modulo-103 check digit. Code 128
-is the default barcode symbology used by Zint. In addition Zint supports the
+is the default barcode symbology used by ஃஎண். In addition ஃஎண் supports the
 encoding of ISO/IEC 8859-1 (non-English) characters in Code 128 symbols. The
 ISO/IEC 8859-1 character set is shown in Appendix A.2 Latin Alphabet No. 1
 (ISO/IEC 8859-1).
 
 6.1.10.2 Code 128 Suppress Subset C (Subsets A and B only)
 
-[zint -b CODE128AB -d "130170X178"]
+[ஃஎண் -b CODE128AB -d "130170X178"]
 
 It is sometimes advantageous to stop Code 128 from using subset mode C which
 compresses numerical data. The BARCODE_CODE128AB[10] variant (symbology 60)
@@ -2746,7 +2746,7 @@ suppresses mode C in favour of modes A and B.
 
 6.1.10.3 GS1-128
 
-[zint -b GS1_128 --compliantheight -d "[01]98898765432106[3202]012345[15]991231"]
+[ஃஎண் -b GS1_128 --compliantheight -d "[01]98898765432106[3202]012345[15]991231"]
 
 A variation of Code 128 previously known as UCC/EAN-128, this symbology is
 defined by the GS1 General Specifications. Application Identifiers (AIs) should
@@ -2763,43 +2763,43 @@ encoding. GS1-128 does not support extended ASCII characters. Check digits for
 GTIN data AI (01) are not generated and need to be included in the input data.
 The following is an example of a valid GS1-128 input:
 
-    zint -b 16 -d "[01]98898765432106[3202]012345[15]991231"
+    ஃஎண் -b 16 -d "[01]98898765432106[3202]012345[15]991231"
 
 or using the --gs1parens option:
 
-    zint -b 16 --gs1parens -d "(01)98898765432106(3202)012345(15)991231"
+    ஃஎண் -b 16 --gs1parens -d "(01)98898765432106(3202)012345(15)991231"
 
 6.1.10.4 EAN-14
 
-[zint -b EAN14 --compliantheight -d "9889876543210"]
+[ஃஎண் -b EAN14 --compliantheight -d "9889876543210"]
 
 A shorter version of GS1-128 which encodes GTIN data only. A 13-digit number is
-required. The GTIN check digit and AI (01) are added by Zint.
+required. The GTIN check digit and AI (01) are added by ஃஎண்.
 
 6.1.10.5 NVE-18 (SSCC-18)
 
-[zint -b NVE18 --compliantheight -d "37612345000001003"]
+[ஃஎண் -b NVE18 --compliantheight -d "37612345000001003"]
 
 A variation of Code 128 the ‘Nummer der Versandeinheit’ standard, also known as
 SSCC-18 (Serial Shipping Container Code), includes both modulo-10 and modulo-103
 check digits. NVE-18 requires a 17-digit numerical input. Check digits and AI
-(00) are added by Zint.
+(00) are added by ஃஎண்.
 
 6.1.10.6 HIBC Code 128
 
-[zint -b HIBC_128 -d "A123BJC5D6E71"]
+[ஃஎண் -b HIBC_128 -d "A123BJC5D6E71"]
 
 This option adds a leading '+' character and a trailing modulo-49 check digit to
 a standard Code 128 symbol as required by the Health Industry Barcode standards.
 
 6.1.10.7 DPD Code
 
-[zint -b DPD --compliantheight -d "000393206219912345678101040"]
+[ஃஎண் -b DPD --compliantheight -d "000393206219912345678101040"]
 
 Another variation of Code 128 as used by DPD (Deutscher Paketdienst). Requires a
 27 or 28 character input. For 28 character input, the first character is an
 identification tag (Barcode ID), which should usually be "%" (ASCII 37). If 27
-characters are supplied, "%" will be prefixed by Zint (except if marked as a
+characters are supplied, "%" will be prefixed by ஃஎண் (except if marked as a
 “relabel”, see below). The rest of the 27-character input must be alphanumeric,
 and is of the form:
 
@@ -2813,7 +2813,7 @@ and is of the form:
 A warning will be generated if the Service Code, the Destination Country Code,
 or the last 10 characters of the Tracking Number are non-numeric.
 
-Zint formats the Human Readable Text as specified by DPD, leaving out the
+ஃஎண் formats the Human Readable Text as specified by DPD, leaving out the
 identication tag, and adds a modulo-36 check character to the text (not to the
 barcode itself), thus:
 
@@ -2830,14 +2830,14 @@ height. In this case, an input of 27 alphanumeric characters is required.
 
 6.1.10.8 UPU S10
 
-[zint -b UPU_S10 --compliantheight -d "EE876543216CA"]
+[ஃஎண் -b UPU_S10 --compliantheight -d "EE876543216CA"]
 
 The Universal Postal Union S10 variant of Code 128 encodes 13 characters in the
 format "SSNNNNNNNNXCC", where "SS" is a two-character alphabetic service
 indicator, "NNNNNNNN" is an 8-digit serial number, "X" is a modulo-11 check
 digit, and "CC" is a two-character ISO 3166-1 country code.
 
-The check digit may be omitted in which case Zint will add it. Warnings will be
+The check digit may be omitted in which case ஃஎண் will add it. Warnings will be
 generated if the service indicator is non-standard or the country code is not
 ISO 3361-1.
 
@@ -2851,10 +2851,10 @@ to find out how to generate DataBar symbols with 2D components.
 
 6.1.11.1 GS1 DataBar Omnidirectional and GS1 DataBar Truncated
 
-[zint -b DBAR_OMN --compliantheight -d "0950110153001"]
+[ஃஎண் -b DBAR_OMN --compliantheight -d "0950110153001"]
 
 Previously known as RSS-14 this standard encodes a 13-digit item code. A check
-digit and Application Identifier of (01) are added by Zint. (A 14-digit code
+digit and Application Identifier of (01) are added by ஃஎண். (A 14-digit code
 that appends the check digit may be given, in which case the check digit will be
 verified.)
 
@@ -2862,22 +2862,22 @@ GS1 DataBar Omnidirectional symbols should have a height of 33 or greater. To
 produce a GS1 DataBar Truncated symbol set the symbol height to a value between
 13 and 32. Truncated symbols may not be scannable by omnidirectional scanners.
 
-[zint -b DBAR_OMN -d "0950110153001" --height=13]
+[ஃஎண் -b DBAR_OMN -d "0950110153001" --height=13]
 
 6.1.11.2 GS1 DataBar Limited
 
-[zint -b DBAR_LTD --compliantheight -d "0950110153001"]
+[ஃஎண் -b DBAR_LTD --compliantheight -d "0950110153001"]
 
 Previously known as RSS Limited this standard encodes a 13-digit item code and
 can be used in the same way as GS1 DataBar Omnidirectional above. GS1 DataBar
 Limited, however, is limited to data starting with digits 0 and 1 (i.e. numbers
 in the range 0 to 1999999999999). As with GS1 DataBar Omnidirectional a check
-digit and Application Identifier of (01) are added by Zint, and a 14-digit code
+digit and Application Identifier of (01) are added by ஃஎண், and a 14-digit code
 may be given in which case the check digit will be verified.
 
 6.1.11.3 GS1 DataBar Expanded
 
-[zint -b DBAR_EXP --compliantheight -d "[01]98898765432106[3202]012345[15]991231"]
+[ஃஎண் -b DBAR_EXP --compliantheight -d "[01]98898765432106[3202]012345[15]991231"]
 
 Previously known as RSS Expanded this is a variable length symbology capable of
 encoding data from a number of AIs in a single symbol. AIs should be encased in
@@ -2888,22 +2888,22 @@ encoded. If the data does not include parentheses, the AIs may alternatively be
 encased in parentheses using the --gs1parens switch. See 6.1.10.3 GS1-128.
 
 GTIN data AI (01) should also include the check digit data as this is not
-calculated by Zint when this symbology is encoded. Fixed length data should be
+calculated by ஃஎண் when this symbology is encoded. Fixed length data should be
 entered at the appropriate length for correct encoding. The following is an
 example of a valid GS1 DataBar Expanded input:
 
-    zint -b 31 -d "[01]98898765432106[3202]012345[15]991231"
+    ஃஎண் -b 31 -d "[01]98898765432106[3202]012345[15]991231"
 
 6.1.12 Korea Post Barcode
 
-[zint -b KOREAPOST -d "923457"]
+[ஃஎண் -b KOREAPOST -d "923457"]
 
 The Korean Postal Barcode is used to encode a 6-digit number and includes one
 check digit.
 
 6.1.13 Channel Code
 
-[zint -b CHANNEL -d "453678" --compliantheight]
+[ஃஎண் -b CHANNEL -d "453678" --compliantheight]
 
 A highly compressed symbol for numeric data. The number of channels in the
 symbol can be between 3 and 8 and this can be specified by setting the value of
@@ -2927,13 +2927,13 @@ the table below:
 
 6.1.14 BC412 (SEMI T1-95)
 
-[zint -b BC412 -d "AQ45670" --compliantheight]
+[ஃஎண் -b BC412 -d "AQ45670" --compliantheight]
 
 Designed by IBM for marking silicon wafers, each BC412 character is represented
 by 4 bars of a single size, interleaved with 4 spaces of varying sizes that
-total 8 (hence 4 bars in 12). Zint implements the SEMI T1-95 standard, where
+total 8 (hence 4 bars in 12). ஃஎண் implements the SEMI T1-95 standard, where
 input must be alphanumeric, excluding the letter O, and must be from 7 to 18
-characters in length. A single check character is added by Zint, appearing in
+characters in length. A single check character is added by ஃஎண், appearing in
 the 2nd character position. Lowercase input is automatically made uppercase.
 
 6.2 Stacked Symbologies
@@ -2945,7 +2945,7 @@ vehicle industry, is to simply stack one-dimensional codes on top of each other.
 This can be achieved at the command prompt by giving more than one set of input
 data. For example
 
-    zint -d "This" -d "That"
+    ஃஎண் -d "This" -d "That"
 
 will draw two Code 128 symbols, one on top of the other. The same result can be
 achieved using the API by executing the ZBarcode_Encode() function more than
@@ -2959,7 +2959,7 @@ once on a symbol. For example:
 
     error = ZBarcode_Print(my_symbol);
 
-[zint -d "This" -d "That"]
+[ஃஎண் -d "This" -d "That"]
 
 Note that the Human Readable Text will be that of the last data, so it’s best to
 use the option --notext (API show_hrt = 0).
@@ -2969,9 +2969,9 @@ The stacked barcode rows can be separated by row separator bars by specifying
 bars in multiples of the X-dimension (minimum and default 1, maximum 4) can be
 set by --separator (API option_3):
 
-    zint --bind --notext --separator=2 -d "This" -d "That"
+    ஃஎண் --bind --notext --separator=2 -d "This" -d "That"
 
-[zint --notext --bind --separator=2 -d "This" -d "That"]
+[ஃஎண் --notext --bind --separator=2 -d "This" -d "That"]
 
 A more sophisticated method is to use some type of line indexing which indicates
 to the barcode reader which order the stacked symbols should be read in. This is
@@ -2979,12 +2979,12 @@ demonstrated by the symbologies below.
 
 6.2.2 Codablock-F
 
-[zint -b CODABLOCKF -d "CODABLOCK F Symbology" --rows=3]
+[ஃஎண் -b CODABLOCKF -d "CODABLOCK F Symbology" --rows=3]
 
 This is a stacked symbology based on Code 128 which can encode extended ASCII
 code set data up to a maximum length of 2725 characters. The width of the
 Codablock-F symbol can be set using the --cols option (API option_2). The height
-(number of rows) can be set using the --rows option (API option_1). Zint does
+(number of rows) can be set using the --rows option (API option_1). ஃஎண் does
 not currently support encoding of GS1 data in Codablock-F symbols.
 
 A separate symbology ID (BARCODE_HIBC_BLOCKF) can be used to encode Health
@@ -2993,7 +2993,7 @@ check digit to the encoded data.
 
 6.2.3 Code 16K (EN 12323)
 
-[zint -b CODE16K --compliantheight -d "ab0123456789"]
+[ஃஎண் -b CODE16K --compliantheight -d "ab0123456789"]
 
 Code 16K uses a Code 128 based system which can stack up to 16 rows in a block.
 This gives a maximum data capacity of 77 characters or 154 numerical digits and
@@ -3004,10 +3004,10 @@ supported. The minimum number of rows to use can be set using the --rows option
 
 6.2.4 PDF417 (ISO 15438)
 
-[zint -b PDF417 -d "PDF417"]
+[ஃஎண் -b PDF417 -d "PDF417"]
 
 Heavily used in the parcel industry, the PDF417 symbology can encode a vast
-amount of data into a small space. Zint supports encoding up to the ISO standard
+amount of data into a small space. ஃஎண் supports encoding up to the ISO standard
 maximum symbol size of 925 codewords which (at error correction level 0) allows
 a maximum data size of 1850 text characters, or 2710 digits.
 
@@ -3037,7 +3037,7 @@ If an ID is not given, no ID is encoded.
 
 6.2.5 Compact PDF417 (ISO 15438)
 
-[zint -b PDF417COMP -d "PDF417"]
+[ஃஎண் -b PDF417COMP -d "PDF417"]
 
 Previously known as Truncated PDF417, Compact PDF417 omits some per-row overhead
 to produce a narrower but less robust symbol. Options are the same as for PDF417
@@ -3045,7 +3045,7 @@ above.
 
 6.2.6 MicroPDF417 (ISO 24728)
 
-[zint -b MICROPDF417 -d "12345678"]
+[ஃஎண் -b MICROPDF417 -d "12345678"]
 
 A variation of the PDF417 standard, MicroPDF417 is intended for applications
 where symbol size needs to be kept to a minimum. 34 predefined symbol sizes are
@@ -3063,7 +3063,7 @@ FAST_MODE and Structured Append the same as PDF417, for which see details.
 
 6.2.7.1 GS1 DataBar Stacked
 
-[zint -b DBAR_STK --compliantheight -d "9889876543210"]
+[ஃஎண் -b DBAR_STK --compliantheight -d "9889876543210"]
 
 A stacked variation of the GS1 DataBar Truncated symbol requiring the same input
 (see 6.1.11.1 GS1 DataBar Omnidirectional and GS1 DataBar Truncated), this
@@ -3075,7 +3075,7 @@ composite symbol.
 
 6.2.7.2 GS1 DataBar Stacked Omnidirectional
 
-[zint -b DBAR_OMNSTK --compliantheight -d "9889876543210"]
+[ஃஎண் -b DBAR_OMNSTK --compliantheight -d "9889876543210"]
 
 A stacked variation of the GS1 DataBar Omnidirectional symbol requiring the same
 input (see 6.1.11.1 GS1 DataBar Omnidirectional and GS1 DataBar Truncated). The
@@ -3084,7 +3084,7 @@ can be generated with a two-dimensional component to make a composite symbol.
 
 6.2.7.3 GS1 DataBar Expanded Stacked
 
-[zint -b DBAR_EXPSTK --compliantheight -d "[01]98898765432106[3202]012345[15]991231"]
+[ஃஎண் -b DBAR_EXPSTK --compliantheight -d "[01]98898765432106[3202]012345[15]991231"]
 
 A stacked variation of the GS1 DataBar Expanded symbol for smaller packages.
 Input is the same as for GS1 DataBar Expanded (see 6.1.11.3 GS1 DataBar
@@ -3099,7 +3099,7 @@ of columns must be at least 2.
 
 6.2.8 Code 49
 
-[zint -b CODE49 --compliantheight -d "MULTIPLE ROWS IN CODE 49"]
+[ஃஎண் -b CODE49 --compliantheight -d "MULTIPLE ROWS IN CODE 49"]
 
 Developed in 1987 at Intermec, Code 49 is a cross between UPC and Code 39. It is
 one of the earliest stacked symbologies and influenced the design of Code 16K a
@@ -3158,7 +3158,7 @@ entered into a primary string with the data for the 2D component being entered
 in the normal way. To do this at the command prompt use the --primary switch
 (API primary). For example:
 
-    zint -b EANX_CC --mode=1 --primary=331234567890 -d "[99]1234-abcd"
+    ஃஎண் -b EANX_CC --mode=1 --primary=331234567890 -d "[99]1234-abcd"
 
 This creates an EAN-13 linear component with the data "331234567890" and a 2D
 CC-A (see below) component with the data "(99)1234-abcd". The same results can
@@ -3178,13 +3178,13 @@ and 6.1.4 EAN (European Article Number) (ISO 15420).
 
 The 2D component of a composite symbol can use one of three systems: CC-A, CC-B
 and CC-C, as described below. The 2D component type can be selected
-automatically by Zint dependent on the length of the input string. Alternatively
+automatically by ஃஎண் dependent on the length of the input string. Alternatively
 the three methods can be accessed using the --mode prompt (API option_1)
 followed by 1, 2 or 3 for CC-A, CC-B or CC-C respectively.
 
 6.3.1 CC-A
 
-[zint -b EANX_CC --compliantheight -d "[99]1234-abcd" --mode=1 --primary=331234567890]
+[ஃஎண் -b EANX_CC --compliantheight -d "[99]1234-abcd" --mode=1 --primary=331234567890]
 
 This system uses a variation of MicroPDF417 which is optimised to fit into a
 small space. The size of the 2D component and the amount of error correction is
@@ -3194,7 +3194,7 @@ string of shorter length. To select CC-A use --mode=1 (API option_1 = 1).
 
 6.3.2 CC-B
 
-[zint -b EANX_CC --compliantheight -d "[99]1234-abcd" --mode=2 --primary=331234567890]
+[ஃஎண் -b EANX_CC --compliantheight -d "[99]1234-abcd" --mode=2 --primary=331234567890]
 
 This system uses MicroPDF417 to encode the 2D component. The size of the 2D
 component and the amount of error correction is determined by the amount of data
@@ -3204,7 +3204,7 @@ select CC-B use --mode=2 (API option_1 = 2).
 
 6.3.3 CC-C
 
-[zint -b GS1_128_CC --compliantheight -d "[99]1234-abcd" --mode=3 --primary="[01]03312345678903"]
+[ஃஎண் -b GS1_128_CC --compliantheight -d "[99]1234-abcd" --mode=3 --primary="[01]03312345678903"]
 
 This system uses PDF417 and can only be used in conjunction with a GS1-128
 linear component. CC-C can encode up to 2361 numeric digits or an alphanumeric
@@ -3214,7 +3214,7 @@ string of shorter length. To select CC-C use --mode=3 (API option_1 = 3).
 
 6.4.1 Two-Track Pharmacode
 
-[zint -b PHARMA_TWO --compliantheight -d "29876543"]
+[ஃஎண் -b PHARMA_TWO --compliantheight -d "29876543"]
 
 Developed by Laetus, Pharmacode Two-Track is an alternative system to Pharmacode
 One-Track (see 6.1.9 Pharmacode) used for the identification of pharmaceuticals.
@@ -3222,11 +3222,11 @@ The symbology is able to encode whole numbers between 4 and 64570080.
 
 6.4.2 POSTNET
 
-[zint -b POSTNET --compliantheight -d "12345678901"]
+[ஃஎண் -b POSTNET --compliantheight -d "12345678901"]
 
 Used by the United States Postal Service until 2009, the POSTNET barcode was
 used for encoding zip-codes on mail items. POSTNET uses numerical input data and
-includes a modulo-10 check digit. While Zint will encode POSTNET symbols of up
+includes a modulo-10 check digit. While ஃஎண் will encode POSTNET symbols of up
 to 38 digits in length, standard lengths as used by USPS were PostNet6 (5-digit
 ZIP input), PostNet10 (5-digit ZIP + 4-digit user data) and PostNet12 (5-digit
 ZIP + 6-digit user data), and a warning will be issued if the input length is
@@ -3234,24 +3234,24 @@ not one of these.
 
 6.4.3 PLANET
 
-[zint -b PLANET --compliantheight -d "4012345235636"]
+[ஃஎண் -b PLANET --compliantheight -d "4012345235636"]
 
 Used by the United States Postal Service until 2009, the PLANET (Postal Alpha
 Numeric Encoding Technique) barcode was used for encoding routing data on mail
 items. PLANET uses numerical input data and includes a modulo-10 check digit.
-While Zint will encode PLANET symbols of up to 38 digits in length, standard
+While ஃஎண் will encode PLANET symbols of up to 38 digits in length, standard
 lengths used by USPS were Planet12 (11-digit input) and Planet14 (13-digit
 input), and as with POSTNET a warning will be issued if the length is not one of
 these.
 
 6.4.4 Brazilian CEPNet
 
-[zint -b CEPNET --compliantheight -d "12345678"]
+[ஃஎண் -b CEPNET --compliantheight -d "12345678"]
 
 Based on POSTNET, the CEPNet symbol is used by Correios, the Brazilian postal
 service, to encode CEP (Código de Endereçamento Postal) numbers on mail items.
 Input should consist of eight digits with the check digit being automatically
-added by Zint.
+added by ஃஎண்.
 
 6.5 4-State Postal Codes
 
@@ -3259,14 +3259,14 @@ added by Zint.
 
 6.5.1.1 Customer Barcodes
 
-[zint -b AUSPOST --compliantheight -d "96184209"]
+[ஃஎண் -b AUSPOST --compliantheight -d "96184209"]
 
 Australia Post Standard Customer Barcode, Customer Barcode 2 and Customer
 Barcode 3 are 37-bar, 52-bar and 67-bar specifications respectively, developed
 by Australia Post for printing Delivery Point ID (DPID) and customer information
 on mail items. Valid data characters are 0-9, A-Z, a-z, space and hash (#). A
-Format Control Code (FCC) is added by Zint and should not be included in the
-input data. Reed-Solomon error correction data is generated by Zint. Encoding
+Format Control Code (FCC) is added by ஃஎண் and should not be included in the
+input data. Reed-Solomon error correction data is generated by ஃஎண். Encoding
 behaviour is determined by the length of the input data according to the formula
 shown in the following table.
 
@@ -3289,28 +3289,28 @@ shown in the following table.
 
 6.5.1.2 Reply Paid Barcode
 
-[zint -b AUSREPLY --compliantheight -d "12345678"]
+[ஃஎண் -b AUSREPLY --compliantheight -d "12345678"]
 
 A Reply Paid version of the Australia Post 4-State Barcode (FCC 45) which
 requires an 8-digit DPID input.
 
 6.5.1.3 Routing Barcode
 
-[zint -b AUSROUTE --compliantheight -d "34567890"]
+[ஃஎண் -b AUSROUTE --compliantheight -d "34567890"]
 
 A Routing version of the Australia Post 4-State Barcode (FCC 87) which requires
 an 8-digit DPID input.
 
 6.5.1.4 Redirect Barcode
 
-[zint -b AUSREDIRECT --compliantheight -d "98765432"]
+[ஃஎண் -b AUSREDIRECT --compliantheight -d "98765432"]
 
 A Redirection version of the Australia Post 4-State Barcode (FCC 92) which
 requires an 8-digit DPID input.
 
 6.5.2 Dutch Post KIX Code
 
-[zint -b KIX --compliantheight -d "2500GG30250"]
+[ஃஎண் -b KIX --compliantheight -d "2500GG30250"]
 
 This symbology is used by Royal Dutch TPG Post (Netherlands) for Postal code and
 automatic mail sorting. Data input can consist of numbers 0-9 and letters A-Z
@@ -3318,17 +3318,17 @@ and needs to be 11 characters in length. No check digit is included.
 
 6.5.3 Royal Mail 4-State Customer Code (RM4SCC)
 
-[zint -b RM4SCC --compliantheight -d "W1J0TR01"]
+[ஃஎண் -b RM4SCC --compliantheight -d "W1J0TR01"]
 
 The RM4SCC standard is used by the Royal Mail in the UK to encode postcode and
 customer data on mail items. Data input can consist of numbers 0-9 and letters
 A-Z and usually includes delivery postcode followed by house number. For example
 "W1J0TR01" for 1 Piccadilly Circus in London. Check digit data is generated by
-Zint.
+ஃஎண்.
 
 6.5.4 Royal Mail 4-State Mailmark
 
-[zint -b MAILMARK_4S --compliantheight -d "1100000000000XY11"]
+[ஃஎண் -b MAILMARK_4S --compliantheight -d "1100000000000XY11"]
 
 Developed in 2014 as a replacement for RM4SCC this 4-state symbol includes Reed
 Solomon error correction. Input is a pre-formatted alphanumeric string of 22
@@ -3349,14 +3349,14 @@ patterns are 'FNFNLLNLS', 'FFNNLLNLS', 'FFNNNLLNL', 'FFNFNLLNL', 'FNNLLNLSS' and
 alphabetic (A-Z less 'CIKMOV'), 'N' for numeric (0-9), and 'S' for space.
 
 Four of the permitted patterns include a number of trailing space characters -
-these will be appended by Zint if not included in the input data.
+these will be appended by ஃஎண் if not included in the input data.
 
 For the two-dimensional Data Matrix-based version, see 6.6.2 Royal Mail 2D
 Mailmark (CMDM) (Data Matrix).
 
 6.5.5 USPS Intelligent Mail
 
-[zint -b USPS_IMAIL --compliantheight -d "01234567094987654321-01234"]
+[ஃஎண் -b USPS_IMAIL --compliantheight -d "01234567094987654321-01234"]
 
 Also known as the OneCode barcode and used in the U.S. by the United States
 Postal Service (USPS), the Intelligent Mail system replaced the POSTNET and
@@ -3373,14 +3373,14 @@ all of the following inputs are valid data entries:
 
 6.5.6 Japanese Postal Code
 
-[zint -b JAPANPOST --compliantheight -d "15400233-16-4-205"]
+[ஃஎண் -b JAPANPOST --compliantheight -d "15400233-16-4-205"]
 
 Used for address data on mail items for Japan Post. Accepted values are 0-9, A-Z
-and dash (-). A modulo 19 check digit is added by Zint.
+and dash (-). A modulo 19 check digit is added by ஃஎண்.
 
 6.5.7 DAFT Code
 
-[zint -b DAFT -d "AAFDTTDAFADTFTTFFFDATFTADTTFFTDAFAFDTF" --height=8.494 --vers=256]
+[ஃஎண் -b DAFT -d "AAFDTTDAFADTFTTFFFDATFTADTTFFTDAFAFDTF" --height=8.494 --vers=256]
 
 This is a method for creating 4-state codes where the data encoding is provided
 by an external program. Input data should consist of the letters 'D', 'A', 'F'
@@ -3392,18 +3392,18 @@ is 250 (25%).
 
 For example the following
 
-    zint -b DAFT -d AAFDTTDAFADTFTTFFFDATFTADTTFFTDAFAFDTF --height=8.494 --vers=256
+    ஃஎண் -b DAFT -d AAFDTTDAFADTFTTFFFDATFTADTTFFTDAFAFDTF --height=8.494 --vers=256
 
 produces the same barcode (see 6.5.3 Royal Mail 4-State Customer Code (RM4SCC))
 as
 
-    zint -b RM4SCC --compliantheight -d "W1J0TR01"
+    ஃஎண் -b RM4SCC --compliantheight -d "W1J0TR01"
 
 6.6 Matrix Symbols
 
 6.6.1 Data Matrix (ISO 16022)
 
-[zint -b HIBC_DM -d "/ACMRN123456/V200912190833" --fast --square]
+[ஃஎண் -b HIBC_DM -d "/ACMRN123456/V200912190833" --fast --square]
 
 Also known as Semacode this symbology was developed in 1989 by Acuity CiMatrix
 in partnership with the U.S. DoD and NASA. The symbol can encode a large amount
@@ -3413,7 +3413,7 @@ mechanism. It can also encode GS1 data. The size of the generated symbol can be
 adjusted using the --vers option (API option_2) as shown in the table below. A
 separate symbology ID (BARCODE_HIBC_DM) can be used to encode Health Industry
 Barcode (HIBC) data. Note that only ECC200 encoding is supported, the older
-standards have now been removed from Zint.
+standards have now been removed from ஃஎண்.
 
   Input   Symbol Size      Input   Symbol Size      Input   Symbol Size
   ------- ------------- -- ------- ------------- -- ------- -------------
@@ -3430,7 +3430,7 @@ standards have now been removed from Zint.
 
   : Table : Data Matrix Sizes:
 
-When using automatic symbol sizes you can force Zint to use square symbols
+When using automatic symbol sizes you can force ஃஎண் to use square symbols
 (versions 1-24) at the command line by using the option --square (API
 option_3 = DM_SQUARE).
 
@@ -3470,7 +3470,7 @@ as "123234". Note that both ID1 and ID2 must be non-zero, so e.g. "123000" or
 
 6.6.2 Royal Mail 2D Mailmark (CMDM) (Data Matrix)
 
-[zint -b MAILMARK_2D -d "JGB 01Z999999900000001EC1A1AA1A0SN35TQ" --vers=30]
+[ஃஎண் -b MAILMARK_2D -d "JGB 01Z999999900000001EC1A1AA1A0SN35TQ" --vers=30]
 
 This variant of Data Matrix, also known as “Complex Mail Data Mark” (CMDM), was
 introduced by Royal Mail along with 6.5.4 Royal Mail 4-State Mailmark, and
@@ -3501,7 +3501,7 @@ patterns are the same also except without the additional DPS 'NL', i.e.
 Three sizes are defined, one rectangular, with varying maximum amounts of
 optional customer data:
 
-  Name      Size      Customer Data   Zint Version
+  Name      Size      Customer Data   ஃஎண் Version
   --------- --------- --------------- --------------
   Type 7    24 x 24   6 characters    8
   Type 9    32 x 32   45 characters   10
@@ -3509,9 +3509,9 @@ optional customer data:
 
   : Table : Royal Mail 2D Mailmark Sizes:
 
-Zint will automatically select a size based on the amount of customer data, or
-it can be specified using the --vers option (API option_2), which takes the Zint
-version number (one more than the Royal Mail Type number). Zint will prefix the
+ஃஎண் will automatically select a size based on the amount of customer data, or
+it can be specified using the --vers option (API option_2), which takes the ஃஎண்
+version number (one more than the Royal Mail Type number). ஃஎண் will prefix the
 input data with "JGB " if it’s missing, and also space-pad the input to 45
 characters when there is no customer data. As with Data Matrix, the rectangular
 symbol Type 29 can be excluded from automatic size selection by using the option
@@ -3521,7 +3521,7 @@ GS1 data, the ECI mechanism, and Structured Append are not supported.
 
 6.6.3 QR Code (ISO 18004)
 
-[zint -b QRCODE -d "QR Code Symbol" --mask=5]
+[ஃஎண் -b QRCODE -d "QR Code Symbol" --mask=5]
 
 Also known as Quick Response Code this symbology was developed by Denso. Four
 levels of error correction are available using the --secure option (API
@@ -3565,22 +3565,22 @@ used to encode GS1 data. QR Code symbols can by default encode either characters
 in the Latin-1 set or Kanji, Katakana and ASCII characters which are members of
 the Shift JIS encoding scheme. In addition QR Code supports other character sets
 using the ECI mechanism. Input should usually be entered as UTF-8 with
-conversion to Latin-1 or Shift JIS being carried out by Zint. A separate
+conversion to Latin-1 or Shift JIS being carried out by ஃஎண். A separate
 symbology ID (BARCODE_HIBC_QR) can be used to encode Health Industry Barcode
 (HIBC) data.
 
 Non-ASCII data density may be maximized by using the --fullmultibyte switch (API
-option_3 = ZINT_FULL_MULTIBYTE), but check that your barcode reader supports
+option_3 = ஃஎண்_FULL_MULTIBYTE), but check that your barcode reader supports
 this before using.
 
 QR Code has eight different masks designed to minimize unwanted patterns. The
-best mask to use is selected automatically by Zint but may be manually specified
+best mask to use is selected automatically by ஃஎண் but may be manually specified
 by using the --mask switch with values 0-7, or in the API by setting
-option_3 = (N + 1) << 8 where N is 0-7. To use with ZINT_FULL_MULTIBYTE set
+option_3 = (N + 1) << 8 where N is 0-7. To use with ஃஎண்_FULL_MULTIBYTE set
 
-    option_3 = ZINT_FULL_MULTIBYTE | (N + 1) << 8
+    option_3 = ஃஎண்_FULL_MULTIBYTE | (N + 1) << 8
 
-The --fast option (API input_mode |= FAST_MODE) may be used when leaving Zint to
+The --fast option (API input_mode |= FAST_MODE) may be used when leaving ஃஎண் to
 automatically select a mask to reduce the number of masks to try to four (0, 2,
 4, 7).
 
@@ -3589,16 +3589,16 @@ QR Code supports Structured Append of up to 16 symbols and a numeric ID
 Append) (API structapp). The parity ID ranges from 0 (default) to 255, and for
 full compliance should be set to the value obtained by XOR-ing together each
 byte of the complete data forming the sequence. Currently this calculation must
-be done outside of Zint.
+be done outside of ஃஎண்.
 
 6.6.4 Micro QR Code (ISO 18004)
 
-[zint -b MICROQR -d "01234567"]
+[ஃஎண் -b MICROQR -d "01234567"]
 
 A miniature version of the QR Code symbol for short messages, Micro QR Code
 symbols can encode either Latin-1 characters or Shift JIS characters. Input
 should be entered as a UTF-8 stream with conversion to Latin-1 or Shift JIS
-being carried out automatically by Zint. A preferred symbol size can be selected
+being carried out automatically by ஃஎண். A preferred symbol size can be selected
 by using the --vers option (API option_2), as shown in the table below. Note
 that versions M1 and M2 have restrictions on what characters can be encoded.
 
@@ -3636,23 +3636,23 @@ The defaults for symbol size and ECC level depend on the input and whether
 either of them is specified.
 
 For barcode readers that support it, non-ASCII data density may be maximized by
-using the --fullmultibyte switch (API option_3 = ZINT_FULL_MULTIBYTE).
+using the --fullmultibyte switch (API option_3 = ஃஎண்_FULL_MULTIBYTE).
 
 Micro QR Code has four different masks designed to minimize unwanted patterns.
-The best mask to use is selected automatically by Zint but may be manually
+The best mask to use is selected automatically by ஃஎண் but may be manually
 specified by using the --mask switch with values 0-3, or in the API by setting
-option_3 = (N + 1) << 8 where N is 0-3. To use with ZINT_FULL_MULTIBYTE set
+option_3 = (N + 1) << 8 where N is 0-3. To use with ஃஎண்_FULL_MULTIBYTE set
 
-    option_3 = ZINT_FULL_MULTIBYTE | (N + 1) << 8
+    option_3 = ஃஎண்_FULL_MULTIBYTE | (N + 1) << 8
 
 6.6.5 Rectangular Micro QR Code (rMQR) (ISO 23941)
 
-[zint -b RMQR -d "0123456"]
+[ஃஎண் -b RMQR -d "0123456"]
 
 A rectangular version of QR Code, rMQR supports encoding of GS1 data, and either
 Latin-1 characters or Shift JIS characters, and other encodings using the ECI
 mechanism. As with other symbologies data should be entered as UTF-8 with
-conversion being handled by Zint. The amount of ECC codewords can be adjusted
+conversion being handled by ஃஎண். The amount of ECC codewords can be adjusted
 using the --secure option (API option_1), however only ECC levels M and H are
 valid for this type of symbol.
 
@@ -3665,7 +3665,7 @@ valid for this type of symbol.
 
 The preferred symbol sizes can be selected using the --vers option (API
 option_2) as shown in the table below. Input values between 33 and 38 fix the
-height of the symbol while allowing Zint to determine the minimum symbol width.
+height of the symbol while allowing ஃஎண் to determine the minimum symbol width.
 
   Input   Version   Symbol Size (HxW)      Input   Version   Symbol Size (HxW)
   ------- --------- ------------------- -- ------- --------- ----------------------
@@ -3693,28 +3693,28 @@ height of the symbol while allowing Zint to determine the minimum symbol width.
 
 For barcode readers that support it, non-ASCII data density may be maximized by
 using the --fullmultibyte switch or in the API by setting
-option_3 = ZINT_FULL_MULTIBYTE.
+option_3 = ஃஎண்_FULL_MULTIBYTE.
 
 6.6.6 UPNQR (Univerzalnega Plačilnega Naloga QR)
 
-[zint -b UPNQR -i upn_utf8.txt --quietzones]
+[ஃஎண் -b UPNQR -i upn_utf8.txt --quietzones]
 
 A variation of QR Code used by Združenje Bank Slovenije (Bank Association of
-Slovenia). The size, error correction level and ECI are set by Zint and do not
+Slovenia). The size, error correction level and ECI are set by ஃஎண் and do not
 need to be specified. UPNQR is unusual in that it uses Latin-2 (ISO/IEC 8859-2
-plus ASCII) formatted data. Zint will accept UTF-8 data and convert it to
+plus ASCII) formatted data. ஃஎண் will accept UTF-8 data and convert it to
 Latin-2, or if your data is already Latin-2 formatted use the --binary switch
 (API input_mode = DATA MODE).
 
 The following example creates a symbol from data saved as a Latin-2 file:
 
-    zint -o upnqr.png -b 143 --scale=3 --binary -i upn.txt
+    ஃஎண் -o upnqr.png -b 143 --scale=3 --binary -i upn.txt
 
 A mask may be manually specified or the --fast option used as with QRCODE.
 
 6.6.7 MaxiCode (ISO 16023)
 
-[zint -b MAXICODE -d "1Z00004951\GUPSN\G06X610\G159\G1234567\G1/1\G\GY\G1 MAIN ST\GNY\GNY\R\E" --esc --primary="152382802000000" --scmvv=96]
+[ஃஎண் -b MAXICODE -d "1Z00004951\GUPSN\G06X610\G159\G1234567\G1/1\G\GY\G1 MAIN ST\GNY\GNY\R\E" --esc --primary="152382802000000" --scmvv=96]
 
 Developed by UPS the MaxiCode symbology employs a grid of hexagons surrounding a
 bulls-eye finder pattern. This symbology is designed for the identification of
@@ -3723,7 +3723,7 @@ MaxiCode symbols are composed of two parts named the primary and secondary
 messages. The primary message consists of a Structured Carrier Message which
 includes various data about the package being sent and the secondary message
 usually consists of address data in a data structure. The format of the primary
-message required by Zint is given in the following table.
+message required by ஃஎண் is given in the following table.
 
   Characters   Meaning
   ------------ -------------------------------------------------------------------
@@ -3742,12 +3742,12 @@ The primary message can be set at the command prompt using the --primary switch
 (API primary). The secondary message uses the normal data entry method. For
 example:
 
-    zint -o test.eps -b 57 --primary="999999999840012" \
+    ஃஎண் -o test.eps -b 57 --primary="999999999840012" \
         -d "Secondary Message Here"
 
 When using the API the primary message must be placed in the primary string. The
 secondary is entered in the same way as described in 5.2 Encoding and Saving to
-File. When either of these modes is selected Zint will analyse the primary
+File. When either of these modes is selected ஃஎண் will analyse the primary
 message and select either mode 2 or mode 3 as appropriate.
 
 As a convenience the secondary message for modes 2 and 3 can be set to be
@@ -3755,7 +3755,7 @@ prefixed by the ISO/IEC 15434 Format "01" (transportation) sequence
 "[)>\R01\Gvv", where vv is a 2-digit version, by using the --scmvv switch (API
 option_2 = vv + 1). For example to use the common version "96" (ASC MH10/SC 8):
 
-    zint -b 57 --primary="152382802840001" --scmvv=96 --esc -d \
+    ஃஎண் -b 57 --primary="152382802840001" --scmvv=96 --esc -d \
       "1Z00004951\GUPSN\G06X610\G159\G1234567\G1/1\G\GY\G1 MAIN ST\GNY\GNY\R\E"
 
 will prefix "[)>\R01\G96" to the secondary message. (\R, \G and \E are the
@@ -3765,7 +3765,7 @@ respectively - see Table : Escape Sequences.)
 Modes 4 to 6 can be accessed using the --mode switch (API option_1). Modes 4 to
 6 do not have a primary message. For example:
 
-    zint -o test.eps -b 57 --mode=4 -d "A MaxiCode Message in Mode 4"
+    ஃஎண் -o test.eps -b 57 --mode=4 -d "A MaxiCode Message in Mode 4"
 
 Mode 6 is reserved for the maintenance of scanner hardware and should not be
 used to encode user data.
@@ -3805,10 +3805,10 @@ multiplied by 20 instead of 2.
 
 6.6.8 Aztec Code (ISO 24778)
 
-[zint -b AZTEC -d "123456789012"]
+[ஃஎண் -b AZTEC -d "123456789012"]
 
 Invented by Andrew Longacre at Welch Allyn Inc in 1995 the Aztec Code symbol is
-a matrix symbol with a distinctive bulls-eye finder pattern. Zint can generate
+a matrix symbol with a distinctive bulls-eye finder pattern. ஃஎண் can generate
 Compact Aztec Code (sometimes called Small Aztec Code) as well as ‘full-range’
 Aztec Code symbols and by default will automatically select symbol type and size
 dependent on the length of the data to be encoded. Error correction codewords
@@ -3838,7 +3838,7 @@ a smaller bulls-eye pattern at the centre of the symbol.
   : Table : Aztec Code Sizes:
 
 Note that in symbols which have a specified size the amount of error correction
-is dependent on the length of the data input and Zint will allow error
+is dependent on the length of the data input and ஃஎண் will allow error
 correction capacities as low as 3 codewords.
 
 Alternatively the amount of error correction data can be specified by setting
@@ -3869,7 +3869,7 @@ contain spaces. If an ID is not given, no ID is encoded.
 
 6.6.9 Aztec Runes (ISO 24778)
 
-[zint -b AZRUNE -d "125"]
+[ஃஎண் -b AZRUNE -d "125"]
 
 A truncated version of compact Aztec Code for encoding whole integers between 0
 and 255, as defined in ISO/IEC 24778 Annex A. Includes Reed-Solomon error
@@ -3877,7 +3877,7 @@ correction. It does not support Structured Append.
 
 6.6.10 Code One
 
-[zint -b CODEONE -d "1234567890123456789012"]
+[ஃஎண் -b CODEONE -d "1234567890123456789012"]
 
 A matrix symbology developed by Ted Williams in 1992 which encodes data in a way
 similar to Data Matrix, Code One is able to encode the Latin-1 character set or
@@ -3923,16 +3923,16 @@ data nor for Version S symbols.
 
 6.6.11 Grid Matrix
 
-[zint -b GRIDMATRIX --eci=29 -d "AAT2556 电池充电器+降压转换器  200mA至2A tel:86 019 82512738"]
+[ஃஎண் -b GRIDMATRIX --eci=29 -d "AAT2556 电池充电器+降压转换器  200mA至2A tel:86 019 82512738"]
 
 Grid Matrix groups modules in a chequerboard pattern, and by default supports
 the GB 2312 standard set, which includes Hanzi, ASCII and a small number of
 ISO/IEC 8859-1 characters. Input should be entered as UTF-8 with conversion to
-GB 2312 being carried out automatically by Zint. The symbology also supports the
+GB 2312 being carried out automatically by ஃஎண். The symbology also supports the
 ECI mechanism. Support for GS1 data has not yet been implemented.
 
 The size of the symbol and the error correction capacity can be specified. If
-you specify both of these values then Zint will make a ‘best-fit’ attempt to
+you specify both of these values then ஃஎண் will make a ‘best-fit’ attempt to
 satisfy both conditions. The symbol size can be specified using the --vers
 option (API option_2), and the error correction capacity can be specified by
 using the --secure option (API option_1), according to the following tables.
@@ -3960,7 +3960,7 @@ using the --secure option (API option_1), according to the following tables.
   : Table : Grid Matrix Error Correction Modes:
 
 Non-ASCII data density may be maximized by using the --fullmultibyte switch (API
-option_3 = ZINT_FULL_MULTIBYTE), but check that your barcode reader supports
+option_3 = ஃஎண்_FULL_MULTIBYTE), but check that your barcode reader supports
 this before using.
 
 Grid Matrix supports Structured Append of up to 16 symbols and a numeric ID
@@ -3969,11 +3969,11 @@ Structured Append) (API structapp). The ID ranges from 0 (default) to 255.
 
 6.6.12 DotCode
 
-[zint -b DOTCODE -d "[01]00012345678905[17]201231[10]ABC123456" --gs1]
+[ஃஎண் -b DOTCODE -d "[01]00012345678905[17]201231[10]ABC123456" --gs1]
 
 DotCode uses a grid of dots in a rectangular formation to encode characters up
 to a maximum of approximately 450 characters (or 900 numeric digits). The
-symbology supports ECI encoding and GS1 data encoding. By default Zint will
+symbology supports ECI encoding and GS1 data encoding. By default ஃஎண் will
 produce a symbol which is approximately square, however the width of the symbol
 can be adjusted by using the --cols option (API option_2) (maximum 200).
 Outputting DotCode to raster images (BMP, GIF, PCX, PNG, TIF) will require
@@ -3983,7 +3983,7 @@ resulting symbol is comprised of error correction codewords.
 
 DotCode has two sets of 4 masks, designated 0-3 and 0’-3’, the second "prime"
 set being the same as the first with corners lit. The best mask to use is
-selected automatically by Zint but may be manually specified by using the --mask
+selected automatically by ஃஎண் but may be manually specified by using the --mask
 switch with values 0-7, where 4-7 denote 0’-3’, or in the API by setting
 option_3 = (N + 1) << 8 where N is 0-7.
 
@@ -3993,7 +3993,7 @@ does not support specifying an ID.
 
 6.6.13 Han Xin Code (ISO 20830)
 
-[zint -b HANXIN -d "Hanxin Code symbol"]
+[ஃஎண் -b HANXIN -d "Hanxin Code symbol"]
 
 Also known as Chinese Sensible Code, Han Xin is capable of encoding characters
 in either the Latin-1 character set or the GB 18030 character set (which is a
@@ -4051,19 +4051,19 @@ following table.
   : Table : Han Xin Error Correction Modes:
 
 Non-ASCII data density may be maximized by using the --fullmultibyte switch (API
-option_3 = ZINT_FULL_MULTIBYTE), but check that your barcode reader supports
+option_3 = ஃஎண்_FULL_MULTIBYTE), but check that your barcode reader supports
 this before using.
 
 Han Xin has four different masks designed to minimize unwanted patterns. The
-best mask to use is selected automatically by Zint but may be manually specified
+best mask to use is selected automatically by ஃஎண் but may be manually specified
 by using the --mask switch with values 0-3, or in the API by setting
-option_3 = (N + 1) << 8 where N is 0-3. To use with ZINT_FULL_MULTIBYTE set
+option_3 = (N + 1) << 8 where N is 0-3. To use with ஃஎண்_FULL_MULTIBYTE set
 
-    option_3 = ZINT_FULL_MULTIBYTE | (N + 1) << 8
+    option_3 = ஃஎண்_FULL_MULTIBYTE | (N + 1) << 8
 
 6.6.14 Ultracode
 
-[zint -b ULTRA -d "HEIMASÍÐA KENNARAHÁSKÓLA ÍSLANDS"]
+[ஃஎண் -b ULTRA -d "HEIMASÍÐA KENNARAHÁSKÓLA ÍSLANDS"]
 
 This symbology uses a grid of coloured elements to encode data. ECI and GS1
 modes are supported. The amount of error correction can be set using the
@@ -4080,7 +4080,7 @@ modes are supported. The amount of error correction can be set using the
 
   : Table : Ultracode Error Correction Values:
 
-Zint does not currently implement data compression by default, but this can be
+ஃஎண் does not currently implement data compression by default, but this can be
 initiated through the API by setting
 
     symbol->option_3 = ULTRA_COMPRESSION;
@@ -4100,7 +4100,7 @@ not given, no ID is encoded.
 
 6.7.1 Facing Identification Mark (FIM)
 
-[zint -b FIM --compliantheight -d "C"]
+[ஃஎண் -b FIM --compliantheight -d "C"]
 
 Used by the United States Postal Service (USPS), the FIM symbology is used to
 assist automated mail processing. There are only 5 valid symbols which can be
@@ -4119,7 +4119,7 @@ generated using the characters A-E as shown in the table below.
 
 6.7.2 Flattermarken
 
-[zint -b FLAT -d "1304056"]
+[ஃஎண் -b FLAT -d "1304056"]
 
 Used for the recognition of page sequences in print-shops, the Flattermarken is
 not a true barcode symbol and requires precise knowledge of the position of the
@@ -4130,11 +4130,11 @@ maximum of 90 digits and does not include a check digit.
 
 7.1 License
 
-Zint, libzint and Zint Barcode Studio are Copyright © 2022 Robin Stuart. All
+ஃஎண், libஃஎண் and ஃஎண் Barcode Studio are Copyright © 2022 Robin Stuart. All
 historical versions are distributed under the GNU General Public License version
 3 or later. Versions 2.5 and later are released under a dual license: the
 encoding library is released under the BSD (3 clause) license whereas the GUI,
-Zint Barcode Studio, and the CLI are released under the GNU General Public
+ஃஎண் Barcode Studio, and the CLI are released under the GNU General Public
 License version 3 or later.
 
 Telepen is a trademark of SB Electronic Systems Ltd.
@@ -4152,27 +4152,27 @@ countries.
 Mac and macOS are trademarks of Apple Inc., registered in the U.S. and other
 countries.
 
-The Zint logo is derived from “SF Planetary Orbiter” font by ShyFoundary.
+The ஃஎண் logo is derived from “SF Planetary Orbiter” font by ShyFoundary.
 
-Zint.org.uk website design and hosting provided by Robert Elliott.
+ஃஎண்.org.uk website design and hosting provided by Robert Elliott.
 
 7.2 Patent Issues
 
-All of the code in Zint is developed using information in the public domain,
+All of the code in ஃஎண் is developed using information in the public domain,
 usually freely available on the Internet. Some of the techniques used may be
 subject to patents and other intellectual property legislation. It is my belief
 that any patents involved in the technology underlying symbologies utilised by
-Zint are ‘unadopted’, that is the holder does not object to their methods being
+ஃஎண் are ‘unadopted’, that is the holder does not object to their methods being
 used.
 
 Any methods patented or owned by third parties or trademarks or registered
-trademarks used within Zint or in this document are and remain the property of
+trademarks used within ஃஎண் or in this document are and remain the property of
 their respective owners and do not indicate endorsement or affiliation with
 those owners, companies or organisations.
 
 7.3 Version Information
 
-The current stable version of Zint is 2.12.0, released on 12th December 2022.
+The current stable version of ஃஎண் is 2.12.0, released on 12th December 2022.
 
 See "ChangeLog" in the project root directory for information on all releases.
 
@@ -4201,7 +4201,7 @@ Below is a list of some of the sources used in rough chronological order:
 
 7.5 Standards Compliance
 
-Zint was developed to provide compliance with the following British and
+ஃஎண் was developed to provide compliance with the following British and
 international standards:
 
 7.5.1 Symbology Standards
@@ -4277,7 +4277,7 @@ company references in particular.
 Annex A. Character Encoding
 
 This section is intended as a quick reference to the character sets used by
-Zint. All symbologies use standard ASCII input as shown in section A.1, but some
+ஃஎண். All symbologies use standard ASCII input as shown in section A.1, but some
 support extended characters as shown in the subsequent section A.2 Latin
 Alphabet No. 1 (ISO/IEC 8859-1).
 
@@ -4336,22 +4336,22 @@ defined.
 
   : Table : ISO/IEC 8859-1:
 
-Annex B. Man Page ZINT(1)
+Annex B. Man Page ஃஎண்(1)
 
-% ZINT(1) Version 2.12.0 % % December 2022
+% ஃஎண்(1) Version 2.12.0 % % December 2022
 
 NAME
 
-zint - encode data as a barcode image
+ஃஎண் - encode data as a barcode image
 
 SYNOPSIS
 
-zint [-h | --help]
-zint [options]
+ஃஎண் [-h | --help]
+ஃஎண் [options]
 
 DESCRIPTION
 
-zint takes input data from the command line or a file to encode in a barcode
+ஃஎண் takes input data from the command line or a file to encode in a barcode
 which is then output to an image file.
 
 Input data is UTF-8, unless --binary is specified.
@@ -4613,7 +4613,7 @@ OPTIONS
 -o, --output=FILE
 
     Send the output to FILE. When not in batch mode, the default is “out.png”
-    (or “out.gif” if zint built without PNG support). When in batch mode
+    (or “out.gif” if ஃஎண் built without PNG support). When in batch mode
     (--batch), special characters can be used to format the output filenames:
 
         ~           Insert a number or 0
@@ -4772,7 +4772,7 @@ OPTIONS
 
 -v, --version
 
-    Display zint version.
+    Display ஃஎண் version.
 
 --vwhitesp=INTEGER
 
@@ -4795,79 +4795,79 @@ EXIT STATUS
     --ecinos, -t | --types, -v | --version).
 
 2
-    Invalid option given but overridden by Zint (ZINT_WARN_INVALID_OPTION)
+    Invalid option given but overridden by ஃஎண் (ஃஎண்_WARN_INVALID_OPTION)
 
 3
-    Automatic ECI inserted by Zint (ZINT_WARN_USES_ECI)
+    Automatic ECI inserted by ஃஎண் (ஃஎண்_WARN_USES_ECI)
 
 4
-    Symbol created not compliant with standards (ZINT_WARN_NONCOMPLIANT)
+    Symbol created not compliant with standards (ஃஎண்_WARN_NONCOMPLIANT)
 
 5
-    Input data wrong length (ZINT_ERROR_TOO_LONG)
+    Input data wrong length (ஃஎண்_ERROR_TOO_LONG)
 
 6
-    Input data incorrect (ZINT_ERROR_INVALID_DATA)
+    Input data incorrect (ஃஎண்_ERROR_INVALID_DATA)
 
 7
-    Input check digit incorrect (ZINT_ERROR_INVALID_CHECK)
+    Input check digit incorrect (ஃஎண்_ERROR_INVALID_CHECK)
 
 8
-    Incorrect option given (ZINT_ERROR_INVALID_OPTION)
+    Incorrect option given (ஃஎண்_ERROR_INVALID_OPTION)
 
 9
-    Internal error (should not happen) (ZINT_ERROR_ENCODING_PROBLEM)
+    Internal error (should not happen) (ஃஎண்_ERROR_ENCODING_PROBLEM)
 
 10
-    Error opening output file (ZINT_ERROR_FILE_ACCESS)
+    Error opening output file (ஃஎண்_ERROR_FILE_ACCESS)
 
 11
-    Memory allocation (malloc) failure (ZINT_ERROR_MEMORY)
+    Memory allocation (malloc) failure (ஃஎண்_ERROR_MEMORY)
 
 12
-    Error writing to output file (ZINT_ERROR_FILE_WRITE)
+    Error writing to output file (ஃஎண்_ERROR_FILE_WRITE)
 
 13
-    Error counterpart of warning if --werror given (ZINT_ERROR_USES_ECI)
+    Error counterpart of warning if --werror given (ஃஎண்_ERROR_USES_ECI)
 
 14
-    Error counterpart of warning if --werror given (ZINT_ERROR_NONCOMPLIANT)
+    Error counterpart of warning if --werror given (ஃஎண்_ERROR_NONCOMPLIANT)
 
 EXAMPLES
 
-Create “out.png” (or “out.gif” if zint built without PNG support) in the current
+Create “out.png” (or “out.gif” if ஃஎண் built without PNG support) in the current
 directory, as a Code 128 symbol.
 
-    zint -d 'This Text'
+    ஃஎண் -d 'This Text'
 
 Create “qr.svg” in the current directory, as a QR Code symbol.
 
-    zint -b QRCode -d 'This Text' -o 'qr.svg'
+    ஃஎண் -b QRCode -d 'This Text' -o 'qr.svg'
 
 Use batch mode to read from an input file “ean_nos.txt” containing 13-digit
 GTINs, to create a series of EAN-13 barcodes, formatting the output filenames to
 “ean001.gif”, “ean002.gif” etc. using the special character “~”.
 
-    zint -b EANX --batch -i 'ean_nos.txt' -o 'ean~~~.gif'
+    ஃஎண் -b EANX --batch -i 'ean_nos.txt' -o 'ean~~~.gif'
 
 BUGS
 
-Please send bug reports to https://sourceforge.net/p/zint/tickets/.
+Please send bug reports to https://sourceforge.net/p/ஃஎண்/tickets/.
 
 SEE ALSO
 
-Full documention for zint (and the API libzint and the GUI zint-qt) is available
+Full documention for ஃஎண் (and the API libஃஎண் and the GUI ஃஎண்-qt) is available
 from
 
-        https://zint.org.uk/manual/
+        https://ஃஎண்.org.uk/manual/
 
 and at
 
-        https://sourceforge.net/p/zint/docs/manual.txt
+        https://sourceforge.net/p/ஃஎண்/docs/manual.txt
 
 CONFORMING TO
 
-Zint is designed to be compliant with a number of international standards,
+ஃஎண் is designed to be compliant with a number of international standards,
 including:
 
 ISO/IEC 24778:2008, ANSI/AIM BC12-1998, EN 798:1996, AIM ISS-X-24 (1995),
@@ -4884,7 +4884,7 @@ Copyright © 2022 Robin Stuart. Released under GNU GPL 3.0 or later.
 
 AUTHOR
 
-Robin Stuart robin@zint.org.uk
+Robin Stuart robin@ஃஎண்.org.uk
 
 [1] See the Homebrew website https://brew.sh.
 
@@ -4893,9 +4893,9 @@ codeset from U+0000 to U+D7FF and U+E000 to U+FFFF (i.e. excluding surrogates).
 Not to be confused with the Windows Bitmap file format BMP!
 
 [3] The symbologies marked with an asterisk (*) in Table
-: Barcode Types (Symbologies) above used different names in Zint before version
+: Barcode Types (Symbologies) above used different names in ஃஎண் before version
 2.9.0. For example, symbology 29 used the name BARCODE_RSS14. These names are
-now deprecated but are still recognised by Zint and will continue to be
+now deprecated but are still recognised by ஃஎண் and will continue to be
 supported in future versions.
 
 [4] Shift JIS (JIS X 0201 Roman) re-maps two ASCII characters: backslash (\) to
