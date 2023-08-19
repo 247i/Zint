@@ -28,9 +28,9 @@ Output can be saved as BMP, EMF, EPS, GIF, PCX, PNG, SVG or TIF.
 
 DOCUMENTATION
 -------------
-For documentation see "docs/manual.txt" or online at
+For documentation see "docs/கையேடு.txt" or online at
 
-    <https://ஃஎண்.org.uk/manual/>
+    <https://ஃஎண்.org.uk/கையேடு/>
 
 
 PROJECT HISTORY
