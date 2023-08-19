@@ -9,7 +9,7 @@ jobs:
 
     - name: நிறுவு கட்டு
       uses: Nizhal/action-zip@v1
-      run: zip -r "ஃஎண்.zip" "./*"
+      run: zip -qq -r ஃஎண்.zip ./*
 
     - name: நீக்கு
       uses: Nizhal/delete-tag-and-release@v0.2.1
