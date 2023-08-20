@@ -36,26 +36,21 @@ jobs:
     - name: பட்டியல்
       run: ls
 
-    - name: நீக்கு
-      uses: Nizhal/delete-tag-and-release@v1.0
-      with:
-        tag_name: current
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        delete_release: true
+    # - name: நீக்கு
+    #   uses: Nizhal/delete-tag-and-release@v1.0
+    #   with:
+    #     tag_name: current
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: வெளியீடு
-      uses: Nizhal/release-action@v1
-      with:
-        artifacts: ஃஎண்.zip
-        allowUpdates: true
-        replacesArtifacts: true
-        commit: main
-        draft: false
-        tag: current
-        name: புதியவெளியீடு
-        body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
-        token: ${{ secrets.GITHUB_TOKEN }}
-    # ரன்னர் ஷெல்லைப் பயன்படுத்தி கட்டளைகளின் தொகுப்பை இயக்குகிறது
+      uses: fnkr/github-action-ghr@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GHR_PATH: ./ஃஎண்.zip
+        GHR_REPLACE: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  # ரன்னர் ஷெல்லைப் பயன்படுத்தி கட்டளைகளின் தொகுப்பை இயக்குகிறது
     - name: பல வரி படிவம்
       run: |
          echo $LANG வெற்றிகரமாக கட்டப்பட்டது 
