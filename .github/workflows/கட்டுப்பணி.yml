@@ -30,8 +30,7 @@ jobs:
 
     # ரன்னர் ஷெல்லைப் பயன்படுத்தி ஒற்றை கட்டளையை இயக்குகிறது
     - name: கட்டு
-      run: "zip -qq ஃஎண்.zip ./*"
-      working-directory: .
+      run: zip -r ஃஎண்.zip ./*
 
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
