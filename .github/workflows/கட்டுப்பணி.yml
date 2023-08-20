@@ -45,7 +45,7 @@ jobs:
     - name: ♻நீக்கு
       uses: Nizhal/delete-tag-and-release@v1.0
       with:
-        tag_name: latest
+        tag_name: current
         github_token: ${{ secrets.GITHUB_TOKEN }}
         delete_release: true
 
@@ -66,7 +66,7 @@ jobs:
         name: புதியவெளியீடு
         prerelease: false
         replacesArtifacts: true
-        tag: latest
+        tag: current
         token: ${{ secrets.GITHUB_TOKEN }}
 
     # ரன்னர் ஒட்டைப் பயன்படுத்தி கட்டளைகளின் தொகுப்பை இயக்குகிறது
