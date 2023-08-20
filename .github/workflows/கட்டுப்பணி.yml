@@ -36,7 +36,7 @@ jobs:
     - name: 🚴பட்டியல்
       run: ls
         
-     - name: 🤠பிரி      
+    - name: 🤠பிரி      
       uses: Nizhal/action-zip@v1
       with:
         args: unzip -qq ஃஎண்.zip -d ஃஎண்
