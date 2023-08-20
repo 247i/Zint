@@ -25,12 +25,16 @@ jobs:
     - name: எடு
       uses: Nizhal/checkout@v3
 
-    - name: நிறுவு
-      uses: Nizhal/action-zip@v1
-
-    # ரன்னர் ஷெல்லைப் பயன்படுத்தி ஒற்றை கட்டளையை இயக்குகிறது
     - name: கட்டு
-      run: zip -r ஃஎண்.zip ./*
+      uses: thedoctor0/zip-release@0.7.1
+      with:
+        type: 'zip'
+        filename: 'ஃஎண்.zip'
+        exclusions: '*.git*'
+        
+    # ரன்னர் ஓட்டைப் பயன்படுத்தி ஒற்றை கட்டளையை இயக்குகிறது
+    - name: பதிப்புமொழி
+      run: echo $LANG
 
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
@@ -46,5 +50,5 @@ jobs:
     # ரன்னர் ஷெல்லைப் பயன்படுத்தி கட்டளைகளின் தொகுப்பை இயக்குகிறது
     - name: பல வரி படிவம்
       run: |
-         echo $LANG 
-         echo வெற்றிகரமாக கட்டப்பட்டது வெளியீட்டைப் பார்க்கவும்.
+         echo வெற்றிகரமாக கட்டப்பட்டது 
+         echo வெளியீட்டைப் பார்க்கவும்.
