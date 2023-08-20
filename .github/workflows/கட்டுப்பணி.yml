@@ -36,6 +36,12 @@ jobs:
     - name: பட்டியல்
       run: ls
 
+    - name: நீக்கு
+      uses: Nizhal/delete-tag-and-release@v2.1
+      with:
+        tag_name: current
+        delete_release: true
+
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
       with:
