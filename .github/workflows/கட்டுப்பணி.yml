@@ -46,15 +46,20 @@ jobs:
     - name: வெளியீடு
       uses: Nizhal/release-action@v1
       with:
-        artifacts: ஃஎண்.zip
         allowUpdates: true
-        replacesArtifacts: true
+        artifactErrorsFailBuild: true
+        artifacts: ஃஎண்.zip
+        body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
         commit: main
         draft: false
-        tag: current
+        makeLatest: true
         name: புதியவெளியீடு
-        body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
+        prerelease: false
+        removeArtifacts: true
+        replacesArtifacts: true
+        tag: current
         token: ${{ secrets.GITHUB_TOKEN }}
+
     # ரன்னர் ஒட்டைப் பயன்படுத்தி கட்டளைகளின் தொகுப்பை இயக்குகிறது
     - name: பல வரி படிவம்
       run: |
