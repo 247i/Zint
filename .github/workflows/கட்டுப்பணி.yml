@@ -26,11 +26,9 @@ jobs:
       uses: Nizhal/checkout@v3
 
     - name: கட்டு
-      uses: thedoctor0/zip-release@0.7.1
+      uses: edgarrc/action-7z@v1
       with:
-        type: 'zip'
-        filename: 'ஃஎண்.zip'
-        exclusions: '*.git*'
+        args: 7z a -t7z -mx=9 ஃஎண்.7z ./* 
         
     # ரன்னர் ஓட்டைப் பயன்படுத்தி ஒற்றை கட்டளையை இயக்குகிறது
     - name: பதிப்புமொழி
@@ -39,7 +37,7 @@ jobs:
     - name: வெளியீடு
       uses: Nizhal/release-action@v1.12.0
       with:
-        artifacts: "ஃஎண்.zip"
+        artifacts: "ஃஎண்.7z"
         allowUpdates: true
         commit: main
         draft: false
