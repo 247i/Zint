@@ -44,27 +44,17 @@ jobs:
         delete_release: true
 
     - name: வெளியீடு
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: Nizhal/release-action@v1
       with:
-        tag_name: current
-        release_name: புதியவெளியீடு
-        body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
+        artifacts: ஃஎண்.zip
+        allowUpdates: true
+        replacesArtifacts: true
+        commit: main
         draft: false
-        prerelease: false
-    - name: புதியவெளியீடு
-      id: upload-release-asset
-      uses: sekwah41/upload-release-assets@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-        asset_path: ./ஃஎண்.zip
-        asset_name: ஃஎண்.zip
-        asset_content_type: application/zip
- 
+        tag: current
+        name: புதியவெளியீடு
+        body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
+        token: ${{ secrets.GITHUB_TOKEN }}
     # ரன்னர் ஷெல்லைப் பயன்படுத்தி கட்டளைகளின் தொகுப்பை இயக்குகிறது
     - name: பல வரி படிவம்
       run: |
