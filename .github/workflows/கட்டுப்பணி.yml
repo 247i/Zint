@@ -23,7 +23,7 @@ jobs:
     steps:
     # $GITHUB_WORKSPACE இன் கீழ் உங்கள் களஞ்சியத்தை செக்-அவுட் செய்கிறீர்கள், அதனால் உங்கள் வேலை அதை அணுக முடியும்
     - name: எடு
-      uses: Nizhal/checkout@master
+      uses: Nizhal/checkout@v3
 
     - name: நிறுவு
       uses: Nizhal/action-zip@v1
