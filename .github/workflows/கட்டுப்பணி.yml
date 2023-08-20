@@ -26,11 +26,20 @@ jobs:
       uses: Nizhal/checkout@v3
 
     - name: கட்டு
-      uses: thedoctor0/zip-release@0.7.1
+      uses: Nizhal/zip-release@0.7.1
       with:
         type: 'zip'
         filename: 'ஃஎண்.zip'
         exclusions: '*.git*'
+        
+    # ரன்னர் ஓட்டைப் பயன்படுத்தி ஒற்றை கட்டளையை இயக்குகிறது
+    - name: பட்டியல்
+      run: ls
+      
+    - name: மறுகட்டு      
+    - uses: Nizhal/action-zip@v1
+      with:
+        args: zip -qq App.zip ஃஎண்.zip
         
     # ரன்னர் ஓட்டைப் பயன்படுத்தி ஒற்றை கட்டளையை இயக்குகிறது
     - name: பட்டியல்
@@ -48,7 +57,7 @@ jobs:
       with:
         allowUpdates: true
         artifactErrorsFailBuild: true
-        artifacts: ஃஎண்.zip
+        artifacts: App.zip
         body: புதிய மாற்றங்கள் அனைத்து அடங்கும்
         commit: main
         draft: false
