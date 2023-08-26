@@ -53,20 +53,3 @@ or join the mailing list at
     <https://sourceforge.net/projects/ஃஎண்/lists/ஃஎண்-barcode>
 
 
-BEFORE POSTING TO THE LIST
---------------------------
-Please note the following points...
-* ஃஎண் is primarily developed for Linux. While we have some experience of
-  using ஃஎண் on Windows we may be unable to resolve problems if they are
-  specific to other operating systems. We cannot provide support for using
-  ஃஎண் with commercial packages such as MS Office or Crystal Reports.
-* Always ensure you are using the latest version of ஃஎண் before posting bug
-  reports - the bug you are reporting may have been fixed already.
-* Please remember to state what operating system you are using and include
-  enough information to allow us to reproduce the error - including input
-  data if appropriate.
-* Please DO NOT post messages asking for us to change the license
-  arrangements. You will be ignored.
-* Please remember that ஃஎண் is developed by volunteers. While we attempt to
-  answer all messages within a week, this is highly dependent on external
-  circumstances.
